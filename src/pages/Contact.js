@@ -1,5 +1,11 @@
-const Contact = () => {
-    return <h1>Contact Me</h1>;
-  };
-  
-  export default Contact;
+import React from 'react'
+
+function Contact() {
+    return (
+        <div>
+            <h1>This is the contact page</h1>
+        </div>
+    )
+}
+
+export default Contact
