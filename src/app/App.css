@@ -53,7 +53,7 @@
   
   ::-webkit-scrollbar-thumb {
     background: lightgray; 
-  border-radius: 2px;
+    border-radius: 2px;
   }
   
   ::-webkit-scrollbar-thumb:hover {

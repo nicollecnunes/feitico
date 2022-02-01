@@ -16,10 +16,10 @@ function Home() {
             <Link className={classes.link} to="about">
               <Typography>sobre</Typography>
             </Link>
-            <Link className={classes.link} to="contact">
+            <Link className={classes.link} to="menu-jogos">
               <Typography>hino</Typography>
             </Link>
-            <Link className={classes.linkDestacado} to="contact">
+            <Link className={classes.linkDestacado} to="menu-jogos">
               <Typography>testar</Typography>
             </Link>
           </Grid>

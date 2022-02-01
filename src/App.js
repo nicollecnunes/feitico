@@ -1,18 +1,20 @@
-import { Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import MenuJogos from "./pages/MenuJogos";
+import Ordenar from "./pages/Ordenar";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Routes>
-        <Route path="/" element={ <Home/> } />
-        <Route path="about" element={ <About/> } />
-        <Route path="contact" element={ <Contact/> } />
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="menu-jogos" element={<MenuJogos />} />
+        <Route path="ordenar" element={<Ordenar />} />
       </Routes>
-    </div>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
