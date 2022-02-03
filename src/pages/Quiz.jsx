@@ -11,6 +11,8 @@ export default function Quiz() {
   const classes = useStyles();
   const numeroPerguntas = 3;
   const [qas, setQas] = useState([]);
+  const [acertos, setAcertos] = useState(0);
+  const [erros, setErros] = useState(0);
 
   function montarTodaPerguntas(n) {
     var QAs = [];
@@ -27,16 +29,33 @@ export default function Quiz() {
     return QAs;
   }
 
+  function handleOpcao(x){
+    if (x) {
+      setAcertos(acertos+1);
+    }else{
+      setErros(erros+1);
+    }
+    console.log("e:", erros, "a:", acertos);
+  }
+
   useEffect(() => {
     setQas(montarTodaPerguntas(numeroPerguntas));
   }, []);
 
   return (
     <>
-      <Grid className={classes.root} alignContent="center">
+      <Grid direction="column" className={classes.root} alignContent="center">
         {!!qas?.length &&
           qas?.map((qa) => {
-            return <QAComponent qa={qa} key={qa.id} />;
+            return (
+              <QAComponent
+                qa={qa}
+                acertos={acertos}
+                erros={erros}
+                handleOpcao={handleOpcao}
+                key={qa.id}
+              />
+            );
           })}
       </Grid>
     </>
@@ -44,21 +63,21 @@ export default function Quiz() {
 }
 
 const useStyles = makeStyles(() => ({
-    root: {
-     display: "flex",
-     flexDirection: "column",
-     justifyContent: "space-between",
-     alignItems: "center",
-     alignContent: "space-between",
-     paddingTop: '25px',
-    },
-    link: {
-      color: "rgb(107, 62, 149)",
-      textDecoration: "none",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      flexDirection: "column",
-      padding: "30px 30px 30px 30px",
-    },
-  }));
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+    alignContent: "space-between",
+    paddingTop: "25px",
+  },
+  link: {
+    color: "rgb(107, 62, 149)",
+    textDecoration: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    padding: "30px 30px 30px 30px",
+  },
+}));
