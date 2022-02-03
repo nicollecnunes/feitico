@@ -1,10 +1,14 @@
+import React, { Component, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Button, Menu, MenuItem } from "@mui/material";
 import imagemBruxa from "../images/1.png";
+import MenuItens from "../components/MenuItens";
 
 function Home() {
   const classes = useStyles();
+  
+
   return (
     <>
       <Grid container direction="column" className={classes.root}>
@@ -16,9 +20,10 @@ function Home() {
             <Link className={classes.link} to="about">
               <Typography>sobre</Typography>
             </Link>
-            <Link className={classes.link} to="menu-jogos">
-              <Typography>hino</Typography>
-            </Link>
+            <Grid className={classes.link}>
+              
+              <MenuItens  />
+            </Grid>
             <Link className={classes.linkDestacado} to="menu-jogos">
               <Typography>testar</Typography>
             </Link>

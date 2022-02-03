@@ -57,7 +57,7 @@ const QAComponent = ({ qa, acertos, erros, handleOpcao }) => {
                 Fim de jogo
               </Typography>
               <Typography id="transition-modal-description" sx={{ mt: 0.5 }}>
-                ...
+                Você acertou {acertos} perguntas!
               </Typography>
               <Grid sx={{ ml: 17, mt: 5 }}>
                 <Button
