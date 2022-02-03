@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { Grid, Typography } from "@mui/material";
 import CardJogo from "../components/CardJogo";
 import imagemDrag from "../images/drag.png";
+import imagemQuiz from "../images/quiz.png";
 
 const jogos = [
   {
@@ -15,9 +16,9 @@ const jogos = [
   },
   {
     id: 1,
-    nome: "Jogo 2",
-    rota: "/jogo-2",
-    imagem: imagemDrag,
+    nome: "Quiz",
+    rota: "/quiz",
+    imagem: imagemQuiz,
     descricao:
       "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
   },

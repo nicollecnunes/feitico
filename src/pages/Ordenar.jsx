@@ -7,7 +7,6 @@ import { Grid, Typography } from "@mui/material";
 
 function App() {
   const [isOrderCorrect, setIsOrderCorrect] = useState(false);
-  console.log("app render");
 
   return (
     <div className="app">

@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
+import { useNavigate } from 'react-router-dom';
 import Typography from "@mui/material/Typography";
 
 const style = {
@@ -20,11 +21,15 @@ const style = {
 
 export default function Ganhou({ reset }) {
   const [open, setOpen] = useState(true);
+  const navigate = useNavigate();
+
 
   const handleClickPlayagain = () => {
     reset();
   };
-  const handleClickQuit = () => {};
+  const handleClickQuit = () => {
+    navigate('/');
+  };
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 

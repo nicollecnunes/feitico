@@ -3,6 +3,7 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Modal from "@mui/material/Modal";
+import { useNavigate } from 'react-router-dom';
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -20,11 +21,14 @@ const style = {
 
 export default function Perdeu({ reset }) {
   const [open, setOpen] = useState(true);
+  const navigate = useNavigate();
 
   const handleClickPlayagain = () => {
     reset();
   };
-  const handleClickQuit = () => {};
+  const handleClickQuit = () => {
+    navigate('/');
+  };
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
