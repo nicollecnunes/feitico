@@ -12,8 +12,8 @@ import {
 import { makeStyles } from "@mui/styles";
 import { useSnackbar } from "notistack";
 
-const QAComponent = ({ qa, acertos, erros, handleOpcao }) => {
-
+const QAComponent = ({ qa, acertos, erros, handleOpcao, listaFinal }) => {
+  
   const style = {
     position: "absolute",
     top: "50%",
@@ -58,6 +58,19 @@ const QAComponent = ({ qa, acertos, erros, handleOpcao }) => {
               </Typography>
               <Typography id="transition-modal-description" sx={{ mt: 0.5 }}>
                 Você acertou {acertos} perguntas!
+              </Typography>
+              <Typography fontWeight={600} id="transition-modal-description" sx={{ mt: 2.5 }}>
+                Respostas:
+              </Typography>
+
+              <Typography id="transition-modal-description" sx={{ mb: 1 }}>
+                {listaFinal[0].p}<br></br>{listaFinal[0].r}
+              </Typography>
+              <Typography id="transition-modal-description" sx={{ mb: 1 }}>
+                {listaFinal[1].p}<br></br>{listaFinal[1].r}
+              </Typography>
+              <Typography id="transition-modal-description" sx={{ mb: 1 }}>
+                {listaFinal[2].p}<br></br>{listaFinal[2].r}
               </Typography>
               <Grid sx={{ ml: 17, mt: 5 }}>
                 <Button

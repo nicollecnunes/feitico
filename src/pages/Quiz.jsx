@@ -13,12 +13,15 @@ export default function Quiz() {
   const [qas, setQas] = useState([]);
   const [acertos, setAcertos] = useState(0);
   const [erros, setErros] = useState(0);
+  const [listaModal, setListaModal] = useState([]);
+
+  var listaFinal = [];
 
   function montarTodaPerguntas(n) {
     var QAs = [];
     for (let i = 0; i < n; i++) {
       var QAatual = montarQA();
-      console.log(QAatual.opcoesResposta);
+      listaFinal.push({ p: QAatual.pergunta, r: QAatual.respostaCorreta });
       QAs.push({
         id: i,
         pergunta: QAatual.pergunta,
@@ -29,17 +32,17 @@ export default function Quiz() {
     return QAs;
   }
 
-  function handleOpcao(x){
+  function handleOpcao(x) {
     if (x) {
-      setAcertos(acertos+1);
-    }else{
-      setErros(erros+1);
+      setAcertos(acertos + 1);
+    } else {
+      setErros(erros + 1);
     }
-    console.log("e:", erros, "a:", acertos);
   }
 
   useEffect(() => {
     setQas(montarTodaPerguntas(numeroPerguntas));
+    setListaModal(listaFinal);
   }, []);
 
   return (
@@ -54,6 +57,7 @@ export default function Quiz() {
                 erros={erros}
                 handleOpcao={handleOpcao}
                 key={qa.id}
+                listaFinal={listaModal}
               />
             );
           })}
