@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
+import React from "react";
 
 const CardJogo = ({ jogo }) => {
   const classes = useStyles();
@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
   root: {
     borderRadius: "20px",
     backgroundColor: "white",
-    marginLeft: "20px"
+    marginLeft: "20px",
   },
   link: {
     color: "rgb(107, 62, 149)",

@@ -1,8 +1,7 @@
-import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import "../";
+import { DragDropContext } from "react-beautiful-dnd";
 import styled from "styled-components";
 import initialData from "../initialData";
-import { createContext, useEffect, useMemo, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { dequal } from "dequal";
 import Ganhou from "./Ganhou";
 import { useIsover } from "../context/RemainingTimeContext";
@@ -165,7 +164,13 @@ const ListaDrag = ({ setIsOrderCorrect }) => {
             ref={provided.innerRef}
             className="card"
           >
-            {<img src={relacaoQuadrinhos[number.value-1]} width={"70%"} className="imagemquadrinho"/>}
+            {
+              <img
+                src={relacaoQuadrinhos[number.value - 1]}
+                width={"70%"}
+                className="imagemquadrinho"
+              />
+            }
           </Grid>
         )}
       </Draggable>

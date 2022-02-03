@@ -1,10 +1,10 @@
 import React, { Component, useEffect, useState } from "react";
+import { montarQA } from "../components/GeradorPerguntas";
 import RespostaQuiz from "../components/RespostaQuiz";
 import PerguntaQuiz from "../components/PerguntaQuiz";
-import { montarQA } from "../components/GeradorPerguntas";
-import { makeStyles } from "@mui/styles";
-import { Grid, Typography } from "@mui/material";
 import QAComponent from "../components/QAComponent";
+import { Grid, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
 export default function Quiz() {
   const [step, setStep] = useState(0);

@@ -1,8 +1,8 @@
+import { useIsover } from "../context/RemainingTimeContext";
+import { useTimer } from "../hooks/useTimer";
 import { Typography } from "@mui/material";
 import { useEffect, useMemo } from "react";
 import styled from "styled-components";
-import { useIsover } from "../context/RemainingTimeContext";
-import { useTimer } from "../hooks/useTimer";
 
 const Container = styled.div`
   display: flex;

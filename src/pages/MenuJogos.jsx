@@ -1,9 +1,9 @@
-import React from "react";
-import { makeStyles } from "@mui/styles";
 import { Grid, Typography } from "@mui/material";
 import CardJogo from "../components/CardJogo";
-import imagemDrag from "../images/drag.png";
 import imagemQuiz from "../images/quiz.png";
+import imagemDrag from "../images/drag.png";
+import { makeStyles } from "@mui/styles";
+import React from "react";
 
 const jogos = [
   {

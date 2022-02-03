@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
-import Button from "@mui/material/Button";
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from "react-router-dom";
+import { Backdrop, Button, Modal, Fade, Grid, Box } from "@mui/material";
 
 const style = {
   position: "absolute",
@@ -23,14 +18,13 @@ export default function Ganhou({ reset }) {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate();
 
-
   const handleClickPlayagain = () => {
     reset();
   };
   const handleClickQuit = () => {
-    navigate('/');
+    navigate("/");
   };
-  const handleOpen = () => setOpen(true);
+  
   const handleClose = () => setOpen(false);
 
   return (

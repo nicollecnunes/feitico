@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
 const useTimer = () => {
-  //   Calculate timer
   const initialTime = () => {
     return 30;
   };
@@ -13,7 +12,6 @@ const useTimer = () => {
   useEffect(() => {
     const handleTimer = () => {
       callRef.current++;
-      // console.log(`step ${callRef.current}paused is ===>`, paused);
 
       if (paused || timer === 0) {
         clearInterval(timerInterval);

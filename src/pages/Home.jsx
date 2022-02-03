@@ -1,9 +1,9 @@
-import React, { Component, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { makeStyles } from "@mui/styles";
 import { Grid, Typography, Button, Menu, MenuItem } from "@mui/material";
-import imagemBruxa from "../images/1.png";
+import React, { Component, useEffect, useState } from "react";
 import MenuItens from "../components/MenuItens";
+import { makeStyles } from "@mui/styles";
+import imagemBruxa from "../images/1.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   const classes = useStyles();

@@ -1,9 +1,9 @@
-import "./App.css";
+import { IsOverProvider } from "../context/RemainingTimeContext";
+import { Grid, Typography } from "@mui/material";
 import ListaDrag from "../components/ListaDrag";
 import styled from "styled-components";
-import { IsOverProvider } from "../context/RemainingTimeContext";
 import { useState } from "react";
-import { Grid, Typography } from "@mui/material";
+import "./App.css";
 
 function App() {
   const [isOrderCorrect, setIsOrderCorrect] = useState(false);
