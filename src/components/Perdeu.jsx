@@ -1,4 +1,4 @@
-import{ Box, Grid, Modal, Fade, Button, Typography} from "@mui/material/Box";
+import{ Box, Grid, Modal, Fade, Button, Typography} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import Backdrop from "@mui/material/Backdrop";
 import React, { useState } from "react";

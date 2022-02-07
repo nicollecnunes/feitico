@@ -4,6 +4,7 @@ import Ordenar from "./pages/Ordenar";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Quiz from "./pages/Quiz";
+import Hino from "./pages/Hino";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="menu-jogos" element={<MenuJogos />} />
         <Route path="ordenar" element={<Ordenar />} />
         <Route path="quiz" element={<Quiz />} />
+        <Route path="hinos/:id" element={<Hino />} />
       </Routes>
     </>
   );

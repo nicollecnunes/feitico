@@ -1,0 +1,111 @@
+export const ListaRepublicas = [
+  {
+    id: 0,
+    nome: "Feitiço",
+    rota: "/hinos/0",
+    hino: "Nooooooooite\r\nA noite sombria chama\r\nDa lua vem o Feitiço\r\nTem golo no caldeirão\r\nE o copo na minha mão\r\nO feitiço não me deixa cair\r\nSurge uma nova poção\r\nAbracadabra\r\nZiriguidum, Ziriguidá\r\nComo é bom bebeeeer nesse lugar\r\nAsa de morcego\r\nPata de barata\r\nUnha de tamaduá\r\nE pro feitiço vingar\r\nBruxa que é bruxa tem que virar!\r\n",
+  },
+  {
+    id: 1,
+    nome: "Acrópole",
+    rota: "/hinos/1",
+    hino: "Para defender a bandeira que erguemos\r\nE enobrescer os valores que de casa trazemos\r\nUma irmandade sobre os pilares de Ouro Preto se\r\nconstrói\r\nA morada da nossa Acrópole foi erguida e nada\r\ndestrói\r\nSe um dia em ruínas se encontrar e o sangue nas\r\nveias do acropoliano ainda pulsar\r\nessa casa será reerguida quantas vezes preciso for\r\nPorque nem mesmo é capaz de apagar o que aqui\r\nficou\r\n*E se você também quer fazer parte dessa história\r\nVira esse copo p entrar na memória\r\ne toma bastante cachaça e cerveja\r\nPorque para ser acrópole tem que ser bebedeira\r\nporra*",
+  },
+  {
+    id: 2,
+
+    nome: "Arca de Noé",
+    rota: "/hinos/2",
+    hino: "Deus, Deus, Deeeeeus\r\nCriou a terra\r\nA terra e os animais\r\nDo pecado de Adão e Eva\r\nAo dilúvio satanás\r\nNessa água tinha um homem\r\nUm homem chamado Noé\r\nNoé criou a Arca\r\nA arca de Noé\r\nDeus é pai e a cachaça vai\r\nDilúvio encharca\r\nPinga na Arca",
+  },
+  {
+    id: 3,
+    nome: "Bico Doce",
+    rota: "/hinos/3",
+    hino: "Lá vem a bico doce\r\ncom toda empolgação\r\nsubiu com euforia entra no salão\r\npor isso convidamos vocês que estão aí\r\njuntos com a bico doce\r\nlama doce lama doce\r\nvem a se divertir\r\no nosso rebolado é sensacional e vai\r\nencher os olhos nesse carnaval por isso\r\nconvidamos vcs que estão aí\r\njuntos com a bico doce\r\nlama doce lama doce\r\nvem a se divertir!\r\n",
+  },
+  {
+    id: 4,
+    nome: "Birinaite",
+    rota: "/hinos/4",
+    hino: "em ouro preto, encontrei a perdição\r\nentão eu vim morar nessa mansão\r\nhoje o rock vai moer, a cachaça vai\r\ncomer vamo botar pra foder até o\r\namanhecer\r\nna birinaite a mulherada não passa\r\ndesejo\r\ne no rock tá rolando sertanejo\r\ne ninguém sai daqui sem um beijo\r\naoooooo birinaite",
+  },
+  {
+    id: 5,
+    nome: "Canaan",
+    rota: "/hinos/5",
+    hino: "leeeeeite, leeeeeite, leite de frigir bixo\r\nsuco ardente de pau capucho\r\ndesce queimando a guela\r\nsó para quando chega no buxo\r\npeida cu, arrebenta veia,\r\npor causa dessa merda eu fui parar na cadeia\r\nsiriri, serere, Cê olha p mim\r\nq eu olho pro cê\r\nCe vai me mataaaar\r\nMas eu vou te beber\r\nCaaaaaaldo de cana\r\nSumo de cipó\r\nC me joga na poeira\r\nQ eu te jogo no gógó\r\nEu não bebo por vicio\r\nEu não bebo por nada\r\nEu bebo em golada\r\nEu bebo em golada\r\nPq no fundo desse copo\r\nTem a imagem de uma mulher amada,\r\nQ n pode morrer afogada\r\nSai daiiii Desgraçada",
+  },
+  {
+    id: 6,
+    nome: "Castelo dos Nobres",
+    rota: "/hinos/6",
+    hino: "Não há mais casa real\r\nnão há nobre sem mansão\r\na nobreza que conheço\r\ne a que vem do coração\r\no que vem do coração\r\nnão é nenhuma nobreza\r\né vontade de se ter:\r\npinga, mulher e riqueza!",
+  },
+  {
+    id: 7,
+    nome: "Deuses",
+    rota: "/hinos/7",
+    hino: "e os deuses\r\ne os deuses\r\nole ole ola\r\n(cantar 3x)\r\n",
+  },
+  {
+    id: 8,
+    nome: "Harém",
+    rota: "/hinos/8",
+    hino: "E mesmo com toda fama, com toda\r\nbrahma, com toda cama, com toda\r\nlama\r\nharém vai levando\r\nharém vai levando\r\nharém vai levando\r\nessa vida!\r\n",
+  },
+  {
+    id: 9,
+    nome: "Hospício",
+    rota: "/hinos/9",
+    hino: "Subi a torre da igreja\r\nToquei o badalo do sino\r\nDesci castigando\r\no homem a mulher e o menino\r\nseu padre parou e me perguntou\r\npor que bebes tanto meu filho?\r\né o destino seu padre\r\nconforme nois vai fazendo, nois vai\r\nbebendo",
+  },
+  {
+    id: 10,
+    nome: "Jardim de Alah",
+    rota: "/hinos/10",
+    hino: "Subi a torre da igreja\r\nToquei o badalo do sino\r\nDesci castigando\r\nhomem mulher e menino\r\nseu padre me perguntou\r\npor que bebês tanto seu moço\r\ne eu lhes respondi\r\nvou bebendo e vou vivendo\r\nporque alah é pai e a cachaça vai",
+  },
+  {
+    id: 11,
+    nome: "Patotinha",
+    rota: "/hinos/11",
+    hino: "salve, salve Patotinha!\r\nA nossa irmandade bota o pé na\r\neternidade\r\nHoras e horas viradas em goló\r\nfazem o ponteiro endoidá\r\nvamo beber vamo chapar\r\né patotinha é patotinha\r\nole, ole, olá\r\n",
+  },
+  {
+    id: 12,
+    nome: "Poleiro dos Anjos",
+    rota: "/hinos/12",
+    hino: "Subi a torre da igreja\r\ntoquei o badalo do sino\r\ndesci castigando homem mulher e\r\nmenino\r\nno caminho encontrei seu padre\r\nque me perguntou sorrindo\r\npq bebês tanto menino\r\né a vida seu padre\r\nenquanto a gente vai vivendo\r\na gente bebendo\r\ndeus é pai a cachaça vai\r\n",
+  },
+  {
+    id: 13,
+    nome: "Pureza",
+    rota: "/hinos/13",
+    hino: "desci do céu\r\ncai na cachaça\r\nvivi minha vida em op\r\ncheio de kamofa e desgraça\r\nsubi pro céu\r\naí eu me curei\r\npois eu sou da vila dos tigres\r\ne a pureza eu herdei\r\ndeus é pai e o adonis também",
+  },
+  {
+    id: 14,
+    nome: "Querubim",
+    rota: "/hinos/14",
+    hino: "Ao Querubim, larga tudo e vem pra mim\r\ntche tche tchê\r\nlá no céu vivem anjos\r\nprincipados e arcanjos\r\ntronos e serafins\r\nmas aqui em ouro preto\r\né que reinam\r\nquerubins\r\ntche tche tche",
+  },
+  {
+    id: 15,
+    nome: "Reino de Baco",
+    rota: "/hinos/15",
+    hino: "Se, se me dissesres o que queres\r\nalém de versos e mulheres\r\nvinho, vinho é o meu fraco\r\nevoé baco!\r\nQuero beber e cantar asneira\r\nno esto brutal das bebedeiras\r\nque tudo enborca e se faz em caco..\r\nevoé baco!\r\n",
+  },
+  {
+    id: 16,
+    nome: "Santuário",
+    rota: "/hinos/16",
+    hino: "Aqui mora um bando de santo\r\nque de santo não tem nada\r\naonde tiver mulher e cachaça\r\no santo nada de braçada\r\npra vc que não conhece\r\num dia vai conhecer\r\nrepública santuário\r\nbota pra foder\r\ne pra acabar logo com essa conversa\r\nvamo todo mundo beber\r\n",
+  },
+  {
+    id: 17,
+    nome: "Vaticano",
+    rota: "/hinos/17",
+    hino: "Quem tem amor tem saudade\r\nquem nao tem passa vontade\r\nfesta boa é na santidade\r\ncarro de puta é voyage\r\nmexer com a Vaticano é\r\nbobagem\r\n",
+  },
+];
