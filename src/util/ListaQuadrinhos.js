@@ -171,7 +171,7 @@ export const ListaQuadrinhos = [
       posicao: 25,
       nome: "Ana Carolina Faria Oliveira Morais",
       curso: "Eng. de Minas",
-      ano: 20118,
+      ano: 2018,
       cidade: "Itabira - MG",
     },
     {

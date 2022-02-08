@@ -17,8 +17,8 @@ function Home() {
             <Typography fontWeight={600}>Feitiço</Typography>
           </Grid>
           <Grid className={classes.menu}>
-            <Link className={classes.link} to="about">
-              <Typography>sobre</Typography>
+            <Link className={classes.link} to="parede">
+              <Typography>Parede</Typography>
             </Link>
             <Grid className={classes.link}>
               

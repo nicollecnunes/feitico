@@ -6,7 +6,7 @@ import App from "./App";
 
 ReactDOM.render(
   <BrowserRouter>
-    <SnackbarProvider maxSnack={3}>
+    <SnackbarProvider maxSnack={1}>
       <App />
     </SnackbarProvider>
   </BrowserRouter>,
