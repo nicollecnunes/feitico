@@ -1,4 +1,4 @@
-import { ListaQuadrinhos } from "../util/ListaQuadrinhos";
+import { DadosQuadrinhos } from "../util/DadosQuadrinhos";
 const numeroTotalQuadrinhos = 27;
 
 function shuffle(a) {
@@ -15,56 +15,65 @@ const inicioPerguntas = [
   "Qual o curso da ",
 ];
 
-export const montarQA = () => {
-  const tipoQ = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
-  const qualExala =
-    Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0;
+const gerarInicioDePergunta = (q) => {
+  return inicioPerguntas[q];
+};
 
-  var Q = inicioPerguntas[tipoQ];
+const gerarTipoPergunta = () => {
+  return Math.floor(Math.random() * (2 - 0 + 1)) + 0; //0 cidade, 1 ano, 2 curso
+}
+
+const selecionarExAluna = () => {
+  return Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0;
+};
+
+export const montarQA = () => {
+  const qualExala = selecionarExAluna();
+  const tipoDePergunta = gerarTipoPergunta();
+  var Q = gerarInicioDePergunta(tipoDePergunta) + DadosQuadrinhos[qualExala].nome + "?";
+
   var opcoesResposta = [];
   var opcaoCorreta;
 
-  Q = Q + ListaQuadrinhos[qualExala].nome + "?";
-
-  switch (tipoQ) {
+  switch (tipoDePergunta) {
     case 0:
-      opcaoCorreta = ListaQuadrinhos[qualExala].cidade;
-      opcoesResposta.push(ListaQuadrinhos[qualExala].cidade);
+      opcaoCorreta = DadosQuadrinhos[qualExala].cidade;
+      opcoesResposta.push(DadosQuadrinhos[qualExala].cidade);
       opcoesResposta.push(
-        ListaQuadrinhos[
+        DadosQuadrinhos[
           Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0
         ].cidade
       );
       opcoesResposta.push(
-        ListaQuadrinhos[
+        DadosQuadrinhos[
           Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0
         ].cidade
       );
       break;
     case 1:
-      opcaoCorreta = ListaQuadrinhos[qualExala].ano;
-      opcoesResposta.push(ListaQuadrinhos[qualExala].ano);
+      opcaoCorreta = DadosQuadrinhos[qualExala].ano;
+      opcoesResposta.push(DadosQuadrinhos[qualExala].ano);
       opcoesResposta.push(
-        ListaQuadrinhos[
+        DadosQuadrinhos[
           Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0
         ].ano
       );
       opcoesResposta.push(
-        ListaQuadrinhos[
+        DadosQuadrinhos[
           Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0
         ].ano
       );
       break;
     case 2:
-      opcaoCorreta = ListaQuadrinhos[qualExala].curso;
-      opcoesResposta.push(ListaQuadrinhos[qualExala].curso);
+      opcaoCorreta = DadosQuadrinhos[qualExala].curso;
+      opcoesResposta.push(DadosQuadrinhos[qualExala].curso);
       opcoesResposta.push(
-        ListaQuadrinhos[
+        DadosQuadrinhos[
           Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0
         ].curso
       );
       opcoesResposta.push(
-        ListaQuadrinhos[
+        DadosQuadrinhos[
           Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0
         ].curso
       );
@@ -73,14 +82,13 @@ export const montarQA = () => {
       break;
   }
 
-  opcoesResposta = shuffle(opcoesResposta);;
+  opcoesResposta = shuffle(opcoesResposta);
 
   const novaQA = {
     pergunta: Q,
     opcoes: opcoesResposta,
     respostaCorreta: opcaoCorreta,
   };
-  
-  console.log(novaQA.opcoes);
+
   return novaQA;
 };

@@ -1,7 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
 import { montarQA } from "../components/GeradorPerguntas";
-import RespostaQuiz from "../components/RespostaQuiz";
-import PerguntaQuiz from "../components/PerguntaQuiz";
 import QAComponent from "../components/QAComponent";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";

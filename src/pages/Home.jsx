@@ -93,12 +93,12 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
   },
   divEsquerda: {
-    padding: "50px 0px 0px 50px",
+    padding: "30px 0px 0px 50px",
   },
   ilustracao: {},
   divDireita: {
     padding: "110px 0px 0px 0px",
-    margin: "0px 0px 0px 120px",
+    margin: "0px 0px 0px 100px",
     width: "40%",
     color: "rgb(107, 62, 149)",
   },

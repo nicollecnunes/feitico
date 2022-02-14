@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 
-const CardJogo = ({ jogo }) => {
+const ItemJogo = ({ jogo }) => {
   const classes = useStyles();
 
   return (
@@ -39,4 +39,4 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default CardJogo;
+export default ItemJogo;

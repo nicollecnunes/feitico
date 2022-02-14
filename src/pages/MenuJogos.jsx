@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import CardJogo from "../components/CardJogo";
+import ItemJogo from "../components/ItemJogo";
 import imagemQuiz from "../images/quiz.png";
 import imagemDrag from "../images/drag.png";
 import { makeStyles } from "@mui/styles";
@@ -36,7 +36,7 @@ function MenuJogos() {
       <Grid className={classes.menuJogos}>
         {!!jogos?.length &&
           jogos?.map((jogo) => {
-            return <CardJogo key={jogo.id} jogo={jogo} />;
+            return <ItemJogo key={jogo.id} jogo={jogo} />;
           })}
       </Grid>
     </Grid>

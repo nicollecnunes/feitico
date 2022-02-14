@@ -13,7 +13,6 @@ import { makeStyles } from "@mui/styles";
 import { useSnackbar } from "notistack";
 
 const QAComponent = ({ qa, acertos, erros, handleOpcao, listaFinal }) => {
-  
   const style = {
     position: "absolute",
     top: "50%",
@@ -59,19 +58,24 @@ const QAComponent = ({ qa, acertos, erros, handleOpcao, listaFinal }) => {
               <Typography id="transition-modal-description" sx={{ mt: 0.5 }}>
                 Você acertou {acertos} perguntas!
               </Typography>
-              <Typography fontWeight={600} id="transition-modal-description" sx={{ mt: 2.5 }}>
+              <Typography
+                fontWeight={600}
+                id="transition-modal-description"
+                sx={{ mt: 2.5 }}
+              >
                 Respostas:
               </Typography>
 
-              <Typography id="transition-modal-description" sx={{ mb: 1 }}>
-                {listaFinal[0].p}<br></br>{listaFinal[0].r}
-              </Typography>
-              <Typography id="transition-modal-description" sx={{ mb: 1 }}>
-                {listaFinal[1].p}<br></br>{listaFinal[1].r}
-              </Typography>
-              <Typography id="transition-modal-description" sx={{ mb: 1 }}>
-                {listaFinal[2].p}<br></br>{listaFinal[2].r}
-              </Typography>
+              {listaFinal.map((x) => {
+                return (
+                  <Typography id="transition-modal-description" sx={{ mb: 1 }}>
+                    {x.p}
+                    <br></br>
+                    {x.r}
+                  </Typography>
+                );
+              })}
+
               <Grid sx={{ ml: 17, mt: 5 }}>
                 <Button
                   color="secondary"
@@ -98,7 +102,6 @@ const QAComponent = ({ qa, acertos, erros, handleOpcao, listaFinal }) => {
   };
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
-  const navigate = useNavigate();
   var x = 0;
   const [botaoDesabilitado, setBotaoDesabilitado] = useState(false);
   const [jogoFinalizado, setJogoFinalizado] = useState(false);
@@ -123,45 +126,23 @@ const QAComponent = ({ qa, acertos, erros, handleOpcao, listaFinal }) => {
       <Typography fontWeight={600} fontSize={26} sx={{ mb: 2 }}>
         {qa.pergunta}
       </Typography>
-      <Button
-        disabled={botaoDesabilitado}
-        color="secondary"
-        variant="contained"
-        sx={{ color: "white", mr: 2 }}
-        onClick={() => {
-          {
-            handleClickAnswer(0);
-          }
-        }}
-      >
-        {qa.opcoes[0]}
-      </Button>
-      <Button
-        disabled={botaoDesabilitado}
-        color="secondary"
-        variant="contained"
-        sx={{ color: "white", mr: 2 }}
-        onClick={() => {
-          {
-            handleClickAnswer(1);
-          }
-        }}
-      >
-        {qa.opcoes[1]}
-      </Button>
-      <Button
-        disabled={botaoDesabilitado}
-        color="secondary"
-        variant="contained"
-        sx={{ color: "white" }}
-        onClick={() => {
-          {
-            handleClickAnswer(2);
-          }
-        }}
-      >
-        {qa.opcoes[2]}
-      </Button>
+      {qa.opcoes.map((x, index) => {
+        return (
+          <Button
+            disabled={botaoDesabilitado}
+            color="secondary"
+            variant="contained"
+            sx={{ color: "white", mr: 2 }}
+            onClick={() => {
+              {
+                handleClickAnswer(index);
+              }
+            }}
+          >
+            {x}
+          </Button>
+        );
+      })}
     </Grid>
   );
 };
