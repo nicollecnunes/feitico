@@ -30,7 +30,6 @@ const initialData = () => {
     .fill(0)
     .map((elem, index) => {
       const id = nanoid();
-      console.log("seria:", listRandom[index]);
       const newItem = {
         id,
         value: listRandom[index],

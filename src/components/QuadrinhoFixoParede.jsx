@@ -15,7 +15,7 @@ export default function QuadrinhoFixoParede(obj) {
         onClick={handleClick}
         style={{ width: 190, backgroundColor: "rgb(234, 209, 238)", margin: 5 }}
       >
-        <img src={obj.exaluna.foto} width={190} className="imagemquadrinho" />
+        <img src={obj.exaluna.foto} width={190}/>
       </Button>
 
       <Button

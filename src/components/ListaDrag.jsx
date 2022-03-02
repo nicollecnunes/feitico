@@ -1,67 +1,28 @@
 import { DragDropContext } from "react-beautiful-dnd";
-import styled from "styled-components";
 import initialData from "../util/initialData";
 import { createContext, useEffect, useState } from "react";
+import { makeStyles } from "@mui/styles";
 import { dequal } from "dequal";
 import ModalFimDeJogo from "./ModalFimDeJogo";
 import { useIsover } from "../context/RemainingTimeContext";
 import Timer from "./Timer";
 import { Droppable, Draggable } from "react-beautiful-dnd";
 import { DadosQuadrinhos } from "../util/DadosQuadrinhos";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
-const Container = styled.div`
-  padding: 50px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 1400px) {
-    padding: 30px;
-  }
-  @media (max-width: 1400px) {
-    padding: 10px;
-  }
-  @media (max-width: 1100px) {
-    width: 97vw;
-  }
-  @media (max-width: 650px) {
-    width: max-content;
-  }
-`;
-const Main = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 650px) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-`;
-const Bottom = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 650px) {
-    height: 50vh;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 30px;
-  }
-  @media (max-width: 350px) {
-    height: 50vh;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 20px;
-  }
-`;
+const ListaDrag = ({ setIsOrderCorrect, tipo }) => {
+  const direcaoLista = (tipo) => {
+    if (tipo === "nome") {
+      return "column";
+    }
+    return "row";
+  };
 
-const ListaDragQuadrinhos = ({ setIsOrderCorrect }) => {
   const [state, setState] = useState(initialData());
   const { numbers, row } = state;
   const { isTimerOver, setIsTimerOver } = useIsover();
+  const classes = useStyles({ direcao: direcaoLista(tipo) });
+
 
   const reset = () => {
     setState(initialData());
@@ -94,7 +55,11 @@ const ListaDragQuadrinhos = ({ setIsOrderCorrect }) => {
   };
 
   const direction = () => {
-    return window.innerWidth > 650 ? "horizontal" : "vertical";
+    if (tipo === "nome") {
+      console.log("nome");
+      return "vertical";
+    }
+    return "horizontal";
   };
 
   const CardDrag = ({ number, index }) => {
@@ -105,15 +70,19 @@ const ListaDragQuadrinhos = ({ setIsOrderCorrect }) => {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             ref={provided.innerRef}
-            className="card"
+            className={classes.card}
           >
-            {
+            {tipo === "nome" ? (
+              <Typography>
+                {DadosQuadrinhos[number.value - 1].nome} {number.value}
+              </Typography>
+            ) : (
               <img
                 src={DadosQuadrinhos[number.value - 1].foto}
                 width={"70%"}
-                className="imagemquadrinho"
+                className={classes.imgQuadrinho}
               />
-            }
+            )}
           </Grid>
         )}
       </Draggable>
@@ -125,7 +94,7 @@ const ListaDragQuadrinhos = ({ setIsOrderCorrect }) => {
       <Droppable droppableId={rowId} direction={direction()}>
         {(provided) => (
           <div
-            className="card_list"
+            className={classes.lista}
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
@@ -140,7 +109,7 @@ const ListaDragQuadrinhos = ({ setIsOrderCorrect }) => {
   };
 
   return (
-    <Main>
+    <>
       {isOrder && isTimerOver === false ? (
         <ModalFimDeJogo reset={reset} setState={setState} ganhou />
       ) : isTimerOver === true ? (
@@ -148,23 +117,33 @@ const ListaDragQuadrinhos = ({ setIsOrderCorrect }) => {
       ) : (
         <>
           <DragDropContext onDragEnd={onDragEnd}>
-            <Container>
-              <OrderContext.Provider value={isOrder}>
-                <ListaQuadrinhosDrag
-                  key={row.id}
-                  numbers={numbers}
-                  rowId={row.id}
-                />
-              </OrderContext.Provider>
-            </Container>
+            <OrderContext.Provider value={isOrder}>
+              <ListaQuadrinhosDrag
+                key={row.id}
+                numbers={numbers}
+                rowId={row.id}
+              />
+            </OrderContext.Provider>
           </DragDropContext>
-          <Bottom>
-            <Timer />
-          </Bottom>
+          <Timer />
         </>
       )}
-    </Main>
+    </>
   );
 };
 
-export default ListaDragQuadrinhos;
+const useStyles = makeStyles(() => ({
+  lista: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: ({ direcao }) => direcao,
+  },
+  imgQuadrinho: {
+
+  },
+  card: {
+
+  }
+}));
+
+export default ListaDrag;

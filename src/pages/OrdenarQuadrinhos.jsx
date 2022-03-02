@@ -1,9 +1,7 @@
 import { IsOverProvider } from "../context/RemainingTimeContext";
 import { Grid, Typography } from "@mui/material";
-import ListaDragQuadrinhos from "../components/ListaDragQuadrinhos";
-import styled from "styled-components";
+import ListaDrag from "../components/ListaDrag";
 import { useState } from "react";
-import "./App.css";
 
 function App() {
   const [isOrderCorrect, setIsOrderCorrect] = useState(false);
@@ -18,7 +16,10 @@ function App() {
         >
           Ordene os quadrinhos
         </Typography>
-        <ListaDragQuadrinhos setIsOrderCorrect={setIsOrderCorrect} />
+        <ListaDrag
+          setIsOrderCorrect={setIsOrderCorrect}
+          tipo={"quadrinho"}
+        />
       </IsOverProvider>
     </div>
   );

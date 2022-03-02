@@ -30,7 +30,6 @@ const Clock = styled.div`
 const Timer = () => {
   const { timer, stop } = useTimer();
   const { setIsTimerOver } = useIsover();
-  console.log("hello timer");
 
   useMemo(() => setIsTimerOver(false), []);
 
