@@ -1,9 +1,9 @@
 import { DragDropContext } from "react-beautiful-dnd";
 import styled from "styled-components";
-import initialData from "../initialData";
+import initialData from "../util/initialData";
 import { createContext, useEffect, useState } from "react";
 import { dequal } from "dequal";
-import FimDeJogo from "./FimDeJogo";
+import ModalFimDeJogo from "./ModalFimDeJogo";
 import { useIsover } from "../context/RemainingTimeContext";
 import Timer from "./Timer";
 import { Droppable, Draggable } from "react-beautiful-dnd";
@@ -58,7 +58,7 @@ const Bottom = styled.div`
   }
 `;
 
-const ListaDrag = ({ setIsOrderCorrect }) => {
+const ListaDragQuadrinhos = ({ setIsOrderCorrect }) => {
   const [state, setState] = useState(initialData());
   const { numbers, row } = state;
   const { isTimerOver, setIsTimerOver } = useIsover();
@@ -142,9 +142,9 @@ const ListaDrag = ({ setIsOrderCorrect }) => {
   return (
     <Main>
       {isOrder && isTimerOver === false ? (
-        <FimDeJogo reset={reset} setState={setState} ganhou />
+        <ModalFimDeJogo reset={reset} setState={setState} ganhou />
       ) : isTimerOver === true ? (
-        <FimDeJogo reset={reset} setState={setState} ganhou={false} />
+        <ModalFimDeJogo reset={reset} setState={setState} ganhou={false} />
       ) : (
         <>
           <DragDropContext onDragEnd={onDragEnd}>
@@ -167,4 +167,4 @@ const ListaDrag = ({ setIsOrderCorrect }) => {
   );
 };
 
-export default ListaDrag;
+export default ListaDragQuadrinhos;

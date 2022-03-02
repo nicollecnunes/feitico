@@ -1,4 +1,4 @@
-import { DadosQuadrinhos } from "../util/DadosQuadrinhos";
+import { DadosQuadrinhos } from "./DadosQuadrinhos";
 const numeroTotalQuadrinhos = 27;
 
 function shuffle(a) {
@@ -21,7 +21,7 @@ const gerarInicioDePergunta = (q) => {
 
 const gerarTipoPergunta = () => {
   return Math.floor(Math.random() * (2 - 0 + 1)) + 0; //0 cidade, 1 ano, 2 curso
-}
+};
 
 const selecionarExAluna = () => {
   return Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0;
@@ -30,7 +30,10 @@ const selecionarExAluna = () => {
 export const montarQA = () => {
   const qualExala = selecionarExAluna();
   const tipoDePergunta = gerarTipoPergunta();
-  var Q = gerarInicioDePergunta(tipoDePergunta) + DadosQuadrinhos[qualExala].nome + "?";
+  var Q =
+    gerarInicioDePergunta(tipoDePergunta) +
+    DadosQuadrinhos[qualExala].nome +
+    "?";
 
   var opcoesResposta = [];
   var opcaoCorreta;

@@ -1,13 +1,13 @@
 import React, { Component, useEffect, useState } from "react";
-import { montarQA } from "../components/GeradorPerguntas";
+import { montarQA } from "../util/GeradorPerguntas";
 import QAComponent from "../components/QAComponent";
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 export default function Quiz() {
-  const [step, setStep] = useState(0);
-  const classes = useStyles();
   const numeroPerguntas = 3;
+
+  const classes = useStyles();
   const [qas, setQas] = useState([]);
   const [acertos, setAcertos] = useState(0);
   const [erros, setErros] = useState(0);

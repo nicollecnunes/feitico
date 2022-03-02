@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 import { useParams } from "react-router-dom";
 import { ListaRepublicas } from "../util/ListaRepublicas";
 
-function Hino() {
+function TelaHino() {
   let { id } = useParams();
   const classes = useStyles();
 
@@ -15,7 +15,7 @@ function Hino() {
     <>
       <Grid container direction="column" className={classes.root}>
         <Typography>{repAtual.nome}</Typography>
-        {hinoFormatado.map((parte, index) => {
+        {hinoFormatado.map((parte) => {
           return <Typography>{parte}</Typography>;
         })}
       </Grid>
@@ -31,4 +31,4 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default Hino;
+export default TelaHino;

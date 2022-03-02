@@ -14,7 +14,9 @@ const initialData = () => {
   const tetoAleatorio = numeroTotalQuadrinhos - quantidadeQuadrinhosJogo;
   const pisoAleatorio = 1;
 
-  const start = Math.floor(Math.random() * (tetoAleatorio - pisoAleatorio + 1)) + pisoAleatorio;
+  const start =
+    Math.floor(Math.random() * (tetoAleatorio - pisoAleatorio + 1)) +
+    pisoAleatorio;
   const end = start + 6;
 
   var listRandom = Array();

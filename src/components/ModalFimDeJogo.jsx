@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import { Button, Modal, Grid } from "@mui/material";
 
-const FimDeJogo = ({ reset, ganhou }) => {
+const ModalFimDeJogo = ({ reset, ganhou }) => {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate();
   const classes = useStyles();
@@ -69,4 +69,4 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default FimDeJogo;
+export default ModalFimDeJogo;

@@ -30,6 +30,21 @@
   color: white;
 }
 
+.cardnome {
+  box-shadow: var(--shadow-1);
+  border-radius: var(--radius-conditional-3);
+  border: var(--border-size-1) solid var(--gray-1);
+  font-size: 5rem;
+  padding: 8px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: blueviolet;
+  color: white;
+}
+
 .imagemquadrinho {
   object-fit: cover;
 }

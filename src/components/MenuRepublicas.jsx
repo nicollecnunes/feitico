@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 import { Link } from "react-router-dom";
 import { ListaRepublicas } from "../util/ListaRepublicas";
 
-function MenuItens() {
+function MenuRepublicas() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
@@ -61,4 +61,4 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default MenuItens;
+export default MenuRepublicas;
