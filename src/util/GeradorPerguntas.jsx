@@ -95,3 +95,33 @@ export const montarQA = () => {
 
   return novaQA;
 };
+
+export const montarQuemE = () => {
+  const qualExala = selecionarExAluna();
+  var foto = DadosQuadrinhos[qualExala].foto;
+
+  var opcoesResposta = [];
+  var opcaoCorreta  = DadosQuadrinhos[qualExala].nome;
+
+  opcoesResposta.push(opcaoCorreta);
+  opcoesResposta.push(
+    DadosQuadrinhos[
+      Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0
+    ].nome
+  );
+  opcoesResposta.push(
+    DadosQuadrinhos[
+      Math.floor(Math.random() * (numeroTotalQuadrinhos - 1 - 0 + 1)) + 0
+    ].nome
+  );
+
+  opcoesResposta = shuffle(opcoesResposta);
+
+  const novaQuemE = {
+    pergunta: foto,
+    opcoes: opcoesResposta,
+    respostaCorreta: opcaoCorreta,
+  };
+
+  return novaQuemE;
+};

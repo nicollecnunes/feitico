@@ -56,7 +56,6 @@ const ListaDrag = ({ setIsOrderCorrect, tipo }) => {
 
   const direction = () => {
     if (tipo === "nome") {
-      console.log("nome");
       return "vertical";
     }
     return "horizontal";

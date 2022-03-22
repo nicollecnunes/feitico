@@ -3,7 +3,7 @@ import ReactCardFlip from "react-card-flip";
 import { Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-export default function QuadrinhoFixoParede(obj) {
+export default function QuadrinhoFixoHomenageado(obj) {
   const [isFlipped, setIsFlipped] = useState(false);
   const classes = useStyles();
 
@@ -30,15 +30,12 @@ export default function QuadrinhoFixoParede(obj) {
         }}
       >
         <Typography fontSize={20} fontWeight={600}>
-          {obj.exaluna.nome} <br></br>
+           {obj.exaluna.nome} <br></br>
           <br></br>
-          {obj.exaluna.curso}
+          {obj.exaluna.motivo}
           <br></br>
           <br></br>
           {obj.exaluna.ano}
-          <br></br>
-          <br></br>
-          {obj.exaluna.cidade}
         </Typography>
       </Button>
     </ReactCardFlip>

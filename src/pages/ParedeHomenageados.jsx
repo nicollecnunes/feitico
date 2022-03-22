@@ -5,16 +5,15 @@ import QuadrinhoFixoHomenageado from "../components/QuadrinhoFixoHomenageado";
 import { DadosQuadrinhos } from "../util/DadosQuadrinhos";
 import { DadosHomenageados } from "../util/DadosHomenageados";
 
-function ParedeQuadrinhosFixos(isExaluna) {
-  console.log(isExaluna);
+function ParedeHomenageados() {
   return (
     <Grid container justifyContent="center">
-      {!!DadosQuadrinhos?.length &&
-        DadosQuadrinhos?.map((q) => {
-          return <QuadrinhoFixoExAluna key={q.posicao} exaluna={q} />;
+      {!!DadosHomenageados?.length &&
+        DadosHomenageados?.map((q) => {
+          return <QuadrinhoFixoHomenageado key={q.posicao} exaluna={q} />;
         })}
     </Grid>
   );
 }
 
-export default ParedeQuadrinhosFixos;
+export default ParedeHomenageados;
