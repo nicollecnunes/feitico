@@ -10,13 +10,25 @@ export default function QuadrinhoFixoParede(obj) {
   const handleClick = () => {
     setIsFlipped(!isFlipped);
   };
+
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
       <Button onClick={handleClick} className={classes.parteFrente}>
         <img src={obj.exaluna.foto} width={190} />
       </Button>
 
-      <Button onClick={handleClick} className={classes.parteTras}>
+      <Button
+        onClick={handleClick}
+        className={classes.parteTras}
+        sx={{
+          color: "white",
+          backgroundColor: "purple",
+          "&:hover": {
+            color: "purple",
+            backgroundColor: "rgb(234, 209, 238)",
+          },
+        }}
+      >
         <Typography fontSize={20} fontWeight={600}>
           {obj.exaluna.nome} <br></br>
           <br></br>
@@ -37,10 +49,11 @@ const useStyles = makeStyles(() => ({
   parteTras: {
     width: 190,
     height: 337,
-    backgroundColor: "rgb(234, 209, 238)",
     margin: 5,
+    texTransform: "lowercase",
     ".MuiButton‑text": {
       textColor: "red",
+      texTransform: "lowercase",
     },
   },
   parteFrente: {
