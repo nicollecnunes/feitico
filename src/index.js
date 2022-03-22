@@ -5,7 +5,7 @@ import React from "react";
 import App from "./App";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <SnackbarProvider maxSnack={1}>
       <App />
     </SnackbarProvider>

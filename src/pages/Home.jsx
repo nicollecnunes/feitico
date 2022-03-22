@@ -16,7 +16,7 @@ function Home() {
         <Grid className={classes.link}>
           <MenuRepublicas />
         </Grid>
-        <Link className={classes.link} to="ordenar-quadrinhos">
+        {/* <Link className={classes.link} to="ordenar-quadrinhos">
           <Typography>Ordenar Quadrinhos</Typography>
         </Link>
         <Link className={classes.link} to="quiz">
@@ -24,7 +24,7 @@ function Home() {
         </Link>
         <Link className={classes.link} to="ordenar-nomes">
           <Typography>Ordenar Nomes</Typography>
-        </Link>
+        </Link> */}
       </Grid>
     </>
   );

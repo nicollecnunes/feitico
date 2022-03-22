@@ -1,32 +1,22 @@
-import ReactDOM from "react-dom";
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import { Button, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
 export default function QuadrinhoFixoParede(obj) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const classes = useStyles();
 
   const handleClick = () => {
     setIsFlipped(!isFlipped);
   };
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-      <Button
-        onClick={handleClick}
-        style={{ width: 190, backgroundColor: "rgb(234, 209, 238)", margin: 5 }}
-      >
-        <img src={obj.exaluna.foto} width={190}/>
+      <Button onClick={handleClick} className={classes.parteFrente}>
+        <img src={obj.exaluna.foto} width={190} />
       </Button>
 
-      <Button
-        onClick={handleClick}
-        style={{
-          width: 190,
-          height: 337,
-          backgroundColor: "rgb(234, 209, 238)",
-          margin: 5,
-        }}
-      >
+      <Button onClick={handleClick} className={classes.parteTras}>
         <Typography fontSize={20} fontWeight={600}>
           {obj.exaluna.nome} <br></br>
           <br></br>
@@ -42,3 +32,20 @@ export default function QuadrinhoFixoParede(obj) {
     </ReactCardFlip>
   );
 }
+
+const useStyles = makeStyles(() => ({
+  parteTras: {
+    width: 190,
+    height: 337,
+    backgroundColor: "rgb(234, 209, 238)",
+    margin: 5,
+    ".MuiButton‑text": {
+      textColor: "red",
+    },
+  },
+  parteFrente: {
+    width: 190,
+    backgroundColor: "rgb(234, 209, 238)",
+    margin: 5,
+  },
+}));
