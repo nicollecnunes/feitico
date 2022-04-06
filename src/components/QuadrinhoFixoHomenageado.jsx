@@ -22,6 +22,7 @@ export default function QuadrinhoFixoHomenageado(obj) {
         className={classes.parteTras}
         sx={{
           color: "white",
+          border: "5px solid rgb(176, 0, 176)",
           backgroundColor: "purple",
           "&:hover": {
             color: "purple",
@@ -29,8 +30,11 @@ export default function QuadrinhoFixoHomenageado(obj) {
           },
         }}
       >
-        <Typography fontSize={20} fontWeight={600}>
-           {obj.exaluna.nome} <br></br>
+        <Typography fontSize={16} fontWeight={600}>
+          {obj.exaluna.nome} <br></br>
+          <br></br>
+          {obj.exaluna.apelido ? "(" + obj.exaluna.apelido + ")" : <>-</>}
+          <br></br>
           <br></br>
           {obj.exaluna.motivo}
           <br></br>
