@@ -16,9 +16,19 @@ export default function QuadrinhoFixoExAluna(obj) {
       <Button
         onClick={handleClick}
         className={classes.parteFrente}
-        sx={{ width: 190, height: 340, backgroundColor: 'purple', border: '1px solid white'}}
+        sx={{
+          width: 190,
+          height: 340,
+          backgroundColor: "rgb(234, 209, 238)",
+          color: "purple",
+          border: "1px solid white",
+        }}
       >
-         <img src={obj.exaluna.foto} width={190} />
+        {obj.mostrar ? (
+          <img src={obj.exaluna.foto} width={190} />
+        ) : (
+          <Typography fontSize={28}>{obj.exaluna.posicao}</Typography>
+        )}
       </Button>
 
       <Button
@@ -37,7 +47,7 @@ export default function QuadrinhoFixoExAluna(obj) {
         <Typography fontSize={16} fontWeight={600}>
           {obj.exaluna.nome} <br></br>
           <br></br>
-          {obj.exaluna.apelido ? '(' + (obj.exaluna.apelido) + ')' : <>-</>}
+          {obj.exaluna.apelido ? "(" + obj.exaluna.apelido + ")" : <>-</>}
           <br></br>
           <br></br>
           {obj.exaluna.curso}

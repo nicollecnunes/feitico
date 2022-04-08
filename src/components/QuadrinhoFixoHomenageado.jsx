@@ -13,8 +13,22 @@ export default function QuadrinhoFixoHomenageado(obj) {
 
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-      <Button onClick={handleClick} className={classes.parteFrente}>
-        <img src={obj.exaluna.foto} width={190} />
+      <Button
+        onClick={handleClick}
+        className={classes.parteFrente}
+        sx={{
+          width: 190,
+          height: 340,
+          backgroundColor: "rgb(234, 209, 238)",
+          color: "purple",
+          border: "1px solid white",
+        }}
+      >
+        {obj.mostrar ? (
+          <img src={obj.exaluna.foto} width={190} />
+        ) : (
+          <Typography fontSize={28}>{obj.exaluna.posicao}</Typography>
+        )}
       </Button>
 
       <Button
