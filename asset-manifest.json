@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/feitico/static/js/main.e556bcad.js",
+    "main.js": "/feitico/static/js/main.0aefd07e.js",
     "static/media/n3.jpg": "/feitico/static/media/n3.d0ebf38de956fa0e459f.jpg",
     "static/media/n4.jpg": "/feitico/static/media/n4.5951fc9078952433ce5c.jpg",
     "static/media/n10.jpg": "/feitico/static/media/n10.5f86eff2065057dd7539.jpg",
@@ -36,9 +36,9 @@
     "static/media/n32.jpg": "/feitico/static/media/n32.3392e381605a7d17638c.jpg",
     "static/media/n30.jpg": "/feitico/static/media/n30.60406efffd921d0b769a.jpg",
     "index.html": "/feitico/index.html",
-    "main.e556bcad.js.map": "/feitico/static/js/main.e556bcad.js.map"
+    "main.0aefd07e.js.map": "/feitico/static/js/main.0aefd07e.js.map"
   },
   "entrypoints": [
-    "static/js/main.e556bcad.js"
+    "static/js/main.0aefd07e.js"
   ]
 }
