@@ -292,7 +292,7 @@ export const DadosQuadrinhos = [
     curso: "Eng. de Minas",
     apelido: "Camilinha",
     ano: "16.2",
-    cidade: "Itabira - MG",
+    cidade: "Santa Maria de Itabira - MG",
     foto: n29,
   },
   {
