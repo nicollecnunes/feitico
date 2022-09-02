@@ -32,6 +32,9 @@ import n31 from "../images/quadrinhos/n31.jpg";
 import n32 from "../images/quadrinhos/n32.jpg";
 import n33 from "../images/quadrinhos/n33.jpg";
 import n34 from "../images/quadrinhos/n34.jpg";
+import n35 from "../images/quadrinhos/n35.jpg";
+import n36 from "../images/quadrinhos/n36.jpg";
+import n37 from "../images/quadrinhos/n37.jpg";
 
 export const DadosQuadrinhos = [
   {
@@ -339,5 +342,32 @@ export const DadosQuadrinhos = [
     ano: "20.1",
     cidade: "Belo Horizonte - MG",
     foto: n34,
+  },
+  {
+    posicao: 35,
+    nome: "Nicolle Canuto Nunes",
+    curso: "Ciência da Computação",
+    apelido: "CLT",
+    ano: "20.1/21.2",
+    cidade: "Diamantina - MG",
+    foto: n35,
+  },
+  {
+    posicao: 36,
+    nome: "Clara Soares Furlan",
+    curso: "Ciências Biológicas",
+    apelido: "Duplicada",
+    ano: "21.2",
+    cidade: "Presidente Prudente - SP",
+    foto: n36,
+  },
+  {
+    posicao: 37,
+    nome: "Rafaella Braz Rosa",
+    curso: "Farmácia",
+    apelido: "Pérola",
+    ano: "21.1/21.2",
+    cidade: "Belo Horizonte - MG",
+    foto: n37,
   },
 ];
