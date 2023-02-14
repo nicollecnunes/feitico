@@ -35,7 +35,7 @@ import n34 from "../images/quadrinhos/n34.jpg";
 import n35 from "../images/quadrinhos/n35.jpg";
 import n36 from "../images/quadrinhos/n36.jpg";
 import n37 from "../images/quadrinhos/n37.jpg";
-import n38 from "../images/quadrinhos/n38.jpg"
+import n38 from "../images/quadrinhos/n38.png"
 
 export const DadosQuadrinhos = [
   {
