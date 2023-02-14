@@ -35,6 +35,7 @@ import n34 from "../images/quadrinhos/n34.jpg";
 import n35 from "../images/quadrinhos/n35.jpg";
 import n36 from "../images/quadrinhos/n36.jpg";
 import n37 from "../images/quadrinhos/n37.jpg";
+import n38 from "../images/quadrinhos/n38.jpg"
 
 export const DadosQuadrinhos = [
   {
@@ -369,5 +370,14 @@ export const DadosQuadrinhos = [
     ano: "21.1/21.2",
     cidade: "Belo Horizonte - MG",
     foto: n37,
+  },
+  {
+    posicao: 38,
+    nome: "Gabriele Helen Linhares Santos",
+    curso: "Química Industrial",
+    apelido: "Parcelada",
+    ano: "22.1/22.2",
+    cidade: "Nova União - MG",
+    foto: n38,
   },
 ];
