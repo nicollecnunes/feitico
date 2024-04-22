@@ -9,6 +9,7 @@ import n8 from "../images/homenageados/n8.jpg";
 import n9 from "../images/homenageados/n9.jpg";
 import n10 from "../images/homenageados/n10.jpg";
 import n11 from "../images/homenageados/n11.jpg";
+import n12 from "../images/homenageados/n12.jpeg"
 
 export const DadosHomenageados = [
   {
@@ -90,5 +91,13 @@ export const DadosHomenageados = [
     ano: 2017,
     foto: n11,
     apelido: "Virgininha",
+  },
+  {
+    posicao: 11,
+    nome: "Kamila Bruto",
+    motivo: "Morou na Feitiço",
+    ano: 2023,
+    foto: n12,
+    apelido: "Kamilão",
   },
 ];

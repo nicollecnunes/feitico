@@ -9,7 +9,7 @@ function shuffle(a) {
 }
 
 const initialData = () => {
-  const numeroTotalQuadrinhos = 27;
+  const numeroTotalQuadrinhos = 30;
   const quantidadeQuadrinhosJogo = 6;
   const tetoAleatorio = numeroTotalQuadrinhos - quantidadeQuadrinhosJogo;
   const pisoAleatorio = 1;

@@ -25,17 +25,18 @@ import n24 from "../images/quadrinhos/n24.jpg";
 import n25 from "../images/quadrinhos/n25.jpg";
 import n26 from "../images/quadrinhos/n26.jpg";
 import n27 from "../images/quadrinhos/n27.jpg";
-import n28 from "../images/quadrinhos/n28.jpg";
-import n29 from "../images/quadrinhos/n29.jpg";
-import n30 from "../images/quadrinhos/n30.jpg";
-import n31 from "../images/quadrinhos/n31.jpg";
+import n28 from "../images/quadrinhos/n28.png";
+import n29 from "../images/quadrinhos/n29.png";
+import n30 from "../images/quadrinhos/n30.png";
+import n31 from "../images/quadrinhos/n31.png";
 import n32 from "../images/quadrinhos/n32.jpg";
 import n33 from "../images/quadrinhos/n33.jpg";
 import n34 from "../images/quadrinhos/n34.jpg";
-import n35 from "../images/quadrinhos/n35.jpg";
+import n35 from "../images/quadrinhos/n35.png";
 import n36 from "../images/quadrinhos/n36.jpg";
 import n37 from "../images/quadrinhos/n37.jpg";
-import n38 from "../images/quadrinhos/n38.png"
+import n38 from "../images/quadrinhos/n38.png";
+import n39 from "../images/quadrinhos/n39.png"
 
 export const DadosQuadrinhos = [
   {
@@ -141,7 +142,7 @@ export const DadosQuadrinhos = [
     posicao: 12,
     nome: "Quênia Goulart Ferreira",
     curso: "Eng. Ambiental",
-    ano: "2008",
+    ano: "2009",
     cidade: "São José dos Campos - SP",
     foto: n12,
     apelido: "Freaky",
@@ -340,7 +341,7 @@ export const DadosQuadrinhos = [
     nome: "Ana Carolina Lopes Dias",
     curso: "Eng. Ambiental",
     apelido: "Matrix",
-    ano: "20.1",
+    ano: "20.2/20.1",
     cidade: "Belo Horizonte - MG",
     foto: n34,
   },
@@ -373,11 +374,20 @@ export const DadosQuadrinhos = [
   },
   {
     posicao: 38,
-    nome: "Gabriele Helen Linhares Santos",
-    curso: "Química Industrial",
-    apelido: "Parcelada",
-    ano: "22.1/22.2",
-    cidade: "Nova União - MG",
+    nome: "Sara Chapuis Veloso",
+    curso: "Nutrição",
+    apelido: "Nokia",
+    ano: "23.1",
+    cidade: "Conselheiro Lafaiete - MG",
     foto: n38,
+  },
+  {
+    posicao: 39,
+    nome: "Marina Queiroga Viana Vaz",
+    curso: "Engenharia Geológica",
+    apelido: "G1",
+    ano: "22.2/23.1",
+    cidade: "Minas Novas - MG",
+    foto: n39,
   },
 ];
