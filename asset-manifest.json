@@ -1,9 +1,16 @@
 {
   "files": {
-    "main.js": "/feitico/static/js/main.0fec8152.js",
+    "main.js": "/feitico/static/js/main.6b479a78.js",
+    "static/media/n39.png": "/feitico/static/media/n39.aa25bd730539a8384144.png",
+    "static/media/n35.png": "/feitico/static/media/n35.7833f9418ff268a4fdd8.png",
+    "static/media/n28.png": "/feitico/static/media/n28.df32e92a11924fe8c9f7.png",
+    "static/media/n30.png": "/feitico/static/media/n30.792fcf1a224c9ce2cbd3.png",
+    "static/media/n38.png": "/feitico/static/media/n38.852e2a81682bc06e6b10.png",
+    "static/media/n31.png": "/feitico/static/media/n31.7d4869de8468340b07f7.png",
     "static/media/n3.jpg": "/feitico/static/media/n3.d0ebf38de956fa0e459f.jpg",
     "static/media/n4.jpg": "/feitico/static/media/n4.5951fc9078952433ce5c.jpg",
     "static/media/n10.jpg": "/feitico/static/media/n10.5f86eff2065057dd7539.jpg",
+    "static/media/n29.png": "/feitico/static/media/n29.285c801b3851a1faac9a.png",
     "static/media/n2.jpg": "/feitico/static/media/n2.882a780cf240bfad5065.jpg",
     "static/media/n8.jpg": "/feitico/static/media/n8.cf7535085ecabe68e286.jpg",
     "static/media/n6.jpg": "/feitico/static/media/n6.d123a8b0ebba582ff3c3.jpg",
@@ -27,21 +34,17 @@
     "static/media/n24.jpg": "/feitico/static/media/n24.24e117fd89f859b515c6.jpg",
     "static/media/n26.jpg": "/feitico/static/media/n26.ed4dd8810552377cbd0b.jpg",
     "static/media/n27.jpg": "/feitico/static/media/n27.44e68dd86d2006635f92.jpg",
+    "static/media/n12.jpeg": "/feitico/static/media/n12.b2ae926bfa447c53b543.jpeg",
     "static/media/n25.jpg": "/feitico/static/media/n25.6ad56b87cdabd965e886.jpg",
     "static/media/n37.jpg": "/feitico/static/media/n37.8dfb28ffa917fd6d937b.jpg",
     "static/media/n36.jpg": "/feitico/static/media/n36.cf02cf206630c054f9e5.jpg",
     "static/media/n33.jpg": "/feitico/static/media/n33.97dde94ef8d349af2090.jpg",
-    "static/media/n28.jpg": "/feitico/static/media/n28.06a46b65d683185884ca.jpg",
-    "static/media/n31.jpg": "/feitico/static/media/n31.0ff704c3a73d71e43a71.jpg",
-    "static/media/n29.jpg": "/feitico/static/media/n29.21d3154adcb3be208a98.jpg",
     "static/media/n34.jpg": "/feitico/static/media/n34.0941076ac8a5270846bb.jpg",
     "static/media/n32.jpg": "/feitico/static/media/n32.3392e381605a7d17638c.jpg",
-    "static/media/n30.jpg": "/feitico/static/media/n30.60406efffd921d0b769a.jpg",
-    "static/media/n35.jpg": "/feitico/static/media/n35.f5716446ee16cc8e4b93.jpg",
     "index.html": "/feitico/index.html",
-    "main.0fec8152.js.map": "/feitico/static/js/main.0fec8152.js.map"
+    "main.6b479a78.js.map": "/feitico/static/js/main.6b479a78.js.map"
   },
   "entrypoints": [
-    "static/js/main.0fec8152.js"
+    "static/js/main.6b479a78.js"
   ]
 }
