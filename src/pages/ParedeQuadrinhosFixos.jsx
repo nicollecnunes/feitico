@@ -11,8 +11,15 @@ function ParedeQuadrinhosFixos(isExaluna) {
   };
 
   return (
-    <Grid>
+    <Grid sx={{ backgroundColor: "rgb(35, 6, 61)", minHeight: "100vh" }}>
       <FormControlLabel
+        sx={{
+          color: "white",
+          fontFamily: "'Bohemian Soul', cursive",
+          "& .MuiCheckbox-root": {
+            color: "white", // Checkbox color
+          },
+        }}
         control={
           <Checkbox
             checked={checked}
@@ -21,6 +28,7 @@ function ParedeQuadrinhosFixos(isExaluna) {
           />
         }
         label="Mostrar Fotos"
+        fontFamily={"'Bohemian Soul', cursive"}
       />
 
       <Grid container justifyContent="center">

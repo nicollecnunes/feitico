@@ -1,27 +1,32 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 const useTimer = () => {
-  const initialTime = () => {
+  const initialTime = useCallback(() => {
     return 30;
-  };
+  }, []);
 
   const [paused, setPaused] = useState(false);
   const [timer, setTimer] = useState(initialTime);
-  const callRef = useRef(0);
+  const timerRef = useRef(null);
 
   useEffect(() => {
-    const handleTimer = () => {
-      callRef.current++;
+    if (paused || timer === 0) {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+      return;
+    }
 
-      if (paused || timer === 0) {
-        clearInterval(timerInterval);
-      } else if (timer > 0) {
-        setTimer((prev) => prev - 1);
+    timerRef.current = setInterval(() => {
+      setTimer((prev) => prev - 1);
+    }, 1000);
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
       }
     };
-    const timerInterval = setInterval(handleTimer, 1000);
-    return () => clearInterval(timerInterval);
-  }, [timer, paused]);
+  }, [timer, paused, initialTime]);
 
   const stop = () => setPaused(true);
 

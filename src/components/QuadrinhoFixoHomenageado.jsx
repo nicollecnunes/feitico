@@ -1,11 +1,32 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 import { Button, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { styled } from "@mui/system";
 
-export default function QuadrinhoFixoHomenageado(obj) {
+const ParteFrenteButton = styled(Button)(({ theme }) => ({
+  width: 190,
+  height: 340,
+  backgroundColor: "rgb(16, 1, 28)",
+  margin: 5,
+}));
+
+const ParteTrasButton = styled(Button)(({ theme }) => ({
+  width: 190,
+  height: 337,
+  margin: 5,
+  color: "white",backgroundColor: "rgb(16, 1, 28)",
+  textTransform: "lowercase",
+  "&:hover": {
+    backgroundColor: "rgb(16, 1, 28)",
+  },
+  "& .MuiButton-text": {
+    textColor: "red",
+    textTransform: "lowercase",
+  },
+}));
+
+export default function QuadrinhoFixoHomenageado({ exaluna, mostrar }) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const classes = useStyles();
 
   const handleClick = () => {
     setIsFlipped(!isFlipped);
@@ -13,67 +34,27 @@ export default function QuadrinhoFixoHomenageado(obj) {
 
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-      <Button
-        onClick={handleClick}
-        className={classes.parteFrente}
-        sx={{
-          width: 190,
-          height: 340,
-          backgroundColor: "rgb(234, 209, 238)",
-          color: "purple",
-          border: "1px solid white",
-        }}
-      >
-        {obj.mostrar ? (
-          <img src={obj.exaluna.foto} width={190} />
+      <ParteFrenteButton onClick={handleClick}>
+        {mostrar ? (
+          <img src={exaluna.foto} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         ) : (
-          <Typography fontSize={28}>{obj.exaluna.posicao}</Typography>
+          <Typography fontSize={28} fontFamily={"'Bohemian Soul', cursive"}>{exaluna.posicao}</Typography>
         )}
-      </Button>
+      </ParteFrenteButton>
 
-      <Button
-        onClick={handleClick}
-        className={classes.parteTras}
-        sx={{
-          color: "white",
-          border: "5px solid rgb(176, 0, 176)",
-          backgroundColor: "purple",
-          "&:hover": {
-            color: "purple",
-            backgroundColor: "rgb(234, 209, 238)",
-          },
-        }}
-      >
-        <Typography fontSize={16} fontWeight={600}>
-          {obj.exaluna.nome} <br></br>
+      <ParteTrasButton onClick={handleClick}>
+        <Typography fontSize={16} fontWeight={600} fontFamily={"'Bohemian Soul', cursive"}>
+          {exaluna.nome} <br></br>
           <br></br>
-          {obj.exaluna.apelido ? "(" + obj.exaluna.apelido + ")" : <>-</>}
+          {exaluna.apelido ? "(" + exaluna.apelido + ")" : <>-</>}
           <br></br>
           <br></br>
-          {obj.exaluna.motivo}
+          {exaluna.motivo}
           <br></br>
           <br></br>
-          {obj.exaluna.ano}
+          {exaluna.ano}
         </Typography>
-      </Button>
+      </ParteTrasButton>
     </ReactCardFlip>
   );
 }
-
-const useStyles = makeStyles(() => ({
-  parteTras: {
-    width: 190,
-    height: 337,
-    margin: 5,
-    texTransform: "lowercase",
-    ".MuiButton‑text": {
-      textColor: "red",
-      texTransform: "lowercase",
-    },
-  },
-  parteFrente: {
-    width: 190,
-    backgroundColor: "rgb(234, 209, 238)",
-    margin: 5,
-  },
-}));

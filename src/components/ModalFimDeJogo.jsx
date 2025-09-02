@@ -1,72 +1,102 @@
-import React, { useState } from "react";
-import Typography from "@mui/material/Typography";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { makeStyles } from "@mui/styles";
-import { Button, Modal, Grid } from "@mui/material";
+import {
+  Button,
+  Grid,
+  Typography,
+  Box,
+  Modal,
+  Backdrop,
+  Fade,
+} from "@mui/material";
 
-const ModalFimDeJogo = ({ reset, ganhou }) => {
-  const [open, setOpen] = useState(true);
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  backgroundColor: "rgb(234, 209, 238)",
+  boxShadow: 24,
+  p: 4,
+};
+
+const ModalFimDeJogo = ({ jogoFinalizado, acertos, listaFinal }) => {
   const navigate = useNavigate();
-  const classes = useStyles();
 
   const handleClickPlayagain = () => {
-    reset();
+    window.location.reload();
   };
   const handleClickQuit = () => {
     navigate("/");
   };
 
-  const handleClose = () => setOpen(false);
-
   return (
     <div>
-      <Modal open={open} onClose={handleClose}>
-        <Grid className={classes.modal}>
-          <Typography variant="h6" component="h2">
-            Fim de Jogo
-          </Typography>
-          <Typography sx={{ mt: 0.5 }}>
-            {ganhou ? "Você venceu!" : "Você perdeu!"}
-          </Typography>
-          <Grid className={classes.botaoContainer}>
-            <Button
-              color="secondary"
-              variant="contained"
-              sx={{ color: "white" }}
-              onClick={handleClickPlayagain}
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={jogoFinalizado}
+        onClose={handleClickQuit}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={jogoFinalizado}>
+          <Box sx={style}>
+            <Typography
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
             >
-              Jogar Novamente
-            </Button>
-            <Button
-              color="secondary"
-              variant="outlined"
-              sx={{ color: "secondary", ml: 2 }}
-              onClick={handleClickQuit}
+              Fim de jogo
+            </Typography>
+            <Typography id="transition-modal-description" sx={{ mt: 0.5 }}>
+              Você acertou {acertos} perguntas!
+            </Typography>
+            <Typography
+              fontWeight={600}
+              id="transition-modal-description"
+              sx={{ mt: 2.5 }}
             >
-              Sair
-            </Button>
-          </Grid>
-        </Grid>
+              Respostas:
+            </Typography>
+
+            {listaFinal.map((x, index) => {
+              return (
+                <Typography key={index} id="transition-modal-description" sx={{ mb: 1 }}>
+                  {x.p}
+                  <br></br>
+                  {x.r}
+                </Typography>
+              );
+            })}
+
+            <Grid sx={{ ml: 17, mt: 5 }}>
+              <Button
+                color="secondary"
+                variant="contained"
+                sx={{ color: "white" }}
+                onClick={handleClickPlayagain}
+              >
+                Jogar Novamente
+              </Button>
+              <Button
+                color="secondary"
+                variant="outlined"
+                sx={{ color: "secondary", ml: 2 }}
+                onClick={handleClickQuit}
+              >
+                Sair
+              </Button>
+            </Grid>
+          </Box>
+        </Fade>
       </Modal>
     </div>
   );
 };
-
-const useStyles = makeStyles(() => ({
-  modal: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    backgroundColor: "rgb(234, 209, 238)",
-    padding: "30px 30px 30px 30px",
-  },
-  botaoContainer: {
-    display: "flex",
-    margin: "30px 0px 0px 0px",
-    justifyContent: "flex-end",
-  },
-}));
 
 export default ModalFimDeJogo;

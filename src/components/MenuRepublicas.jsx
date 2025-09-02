@@ -1,11 +1,16 @@
-import { Grid, Typography, MenuItem, Menu, Button } from "@mui/material";
-import React, { Component, useEffect, useState } from "react";
-import { makeStyles } from "@mui/styles";
+import { Typography, MenuItem, Menu, Button } from "@mui/material";
+import React, { useState } from "react";
+import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 import { ListaRepublicas } from "../util/ListaRepublicas";
 
-function MenuRepublicas() {
-  const classes = useStyles();
+const StyledLink = styled(Link)(({ theme }) => ({
+  color: "inherit",
+  textDecoration: "none",
+  width: "100%",
+}));
+
+function MenuRepublicas({ buttonText, sx, ButtonComponent, ...props }) {
   const [open, setOpen] = useState(false);
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -18,18 +23,21 @@ function MenuRepublicas() {
     setOpen(false);
   };
 
+  const ButtonToRender = ButtonComponent || Button;
+
   return (
     <>
-      <Button
+      <ButtonToRender
         id="basic-button"
-        sx={{ color: "rgb(107, 62, 149)" }}
+        sx={sx}
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        {...props}
       >
-        <Typography>hinos</Typography>
-      </Button>
+        <Typography color="inherit" sx={{ fontFamily: "'Bohemian Soul', cursive" }}>{buttonText || "Hinos"}</Typography>
+      </ButtonToRender>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -40,25 +48,18 @@ function MenuRepublicas() {
         }}
       >
         {!!ListaRepublicas?.length &&
-          ListaRepublicas?.map((rep) => {
+          ListaRepublicas?.map((rep, index) => {
             return (
-              <MenuItem onClick={() => handleClose}>
-                <Link className={classes.menuitem} to={rep.rota}>
-                  <Typography>{rep.nome}</Typography>
-                </Link>
-              </MenuItem>
+              <StyledLink to={rep.rota} key={index}>
+                <MenuItem onClick={handleClose}>
+                  <Typography color="inherit">{rep.nome}</Typography>
+                </MenuItem>
+              </StyledLink>
             );
           })}
       </Menu>
     </>
   );
 }
-
-const useStyles = makeStyles(() => ({
-  menuitem: {
-    color: "rgb(107, 62, 149)",
-    textDecoration: "none",
-  },
-}));
 
 export default MenuRepublicas;

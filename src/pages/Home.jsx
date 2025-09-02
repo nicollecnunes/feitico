@@ -1,49 +1,25 @@
-import { Grid, Typography, Button, Menu, MenuItem } from "@mui/material";
-import React, { Component, useEffect, useState } from "react";
-import MenuRepublicas from "../components/MenuRepublicas";
-import { makeStyles } from "@mui/styles";
-import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
+import React from "react";
+import { styled } from "@mui/system";
+import backgroundImage from "../images/background.jpg";
+
+const StyledHeroSection = styled(Box)(({ theme }) => ({
+  minHeight: "100vh", // Fill the available height from the parent Box
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  background: `url(${backgroundImage}) no-repeat center center`, // Set background image
+  backgroundSize: "cover", // Cover the entire section
+  color: "white",
+  textAlign: "center",
+}));
 
 function Home() {
-  const classes = useStyles();
-
   return (
-    <>
-      <Grid container direction="row" className={classes.root}>
-        <Link className={classes.link} to="parede">
-          <Typography>Ex-alunas</Typography>
-        </Link>
-        <Link className={classes.link} to="parede-homenageados">
-          <Typography>Homenageados</Typography>
-        </Link>
-        <Grid className={classes.link}>
-          <MenuRepublicas />
-        </Grid>
-        {/* <Link className={classes.link} to="ordenar-quadrinhos">
-          <Typography>Ordenar Quadrinhos</Typography>
-        </Link>*/}
-        <Link className={classes.link} to="quiz">
-          <Typography>Quiz</Typography>
-        </Link>
-        {/* <Link className={classes.link} to="ordenar-nomes">
-          <Typography>Ordenar Nomes</Typography>
-        </Link> */}
-      </Grid>
-    </>
+    <StyledHeroSection>
+    </StyledHeroSection>
   );
 }
-
-const useStyles = makeStyles(() => ({
-  root: {
-    height: "98vh",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  link: {
-    color: "rgb(107, 62, 149)",
-    padding: "0px 60px 0px 60px",
-    
-  },
-}));
 
 export default Home;

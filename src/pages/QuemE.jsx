@@ -1,7 +1,7 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { montarQuemE } from "../util/GeradorPerguntas";
 import QuemEComponent from "../components/QuemEComponent";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 export default function Quiz() {

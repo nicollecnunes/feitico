@@ -1,25 +1,30 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { montarQA } from "../util/GeradorPerguntas";
 import QAComponent from "../components/QAComponent";
-import { Grid, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { Grid, Box } from "@mui/material";
+import { styled } from "@mui/system";
+
+const StyledQuizContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center", 
+  background: "rgb(35, 6, 61)"
+}));
 
 export default function Quiz() {
   const numeroPerguntas = 3;
 
-  const classes = useStyles();
   const [qas, setQas] = useState([]);
   const [acertos, setAcertos] = useState(0);
   const [erros, setErros] = useState(0);
   const [listaModal, setListaModal] = useState([]);
 
-  var listaFinal = [];
-
   function montarTodaPerguntas(n) {
     var QAs = [];
+    var tempListaFinal = [];
     for (let i = 0; i < n; i++) {
       var QAatual = montarQA();
-      listaFinal.push({ p: QAatual.pergunta, r: QAatual.respostaCorreta });
+      tempListaFinal.push({ p: QAatual.pergunta, r: QAatual.respostaCorreta });
       QAs.push({
         id: i,
         pergunta: QAatual.pergunta,
@@ -27,7 +32,7 @@ export default function Quiz() {
         respostaCorreta: QAatual.respostaCorreta,
       });
     }
-    return QAs;
+    return { QAs, tempListaFinal };
   }
 
   function handleOpcao(x) {
@@ -39,13 +44,14 @@ export default function Quiz() {
   }
 
   useEffect(() => {
-    setQas(montarTodaPerguntas(numeroPerguntas));
-    setListaModal(listaFinal);
+    const { QAs, tempListaFinal } = montarTodaPerguntas(numeroPerguntas);
+    setQas(QAs);
+    setListaModal(tempListaFinal);
   }, []);
 
   return (
-    <>
-      <Grid direction="column" className={classes.root} alignContent="center">
+    <StyledQuizContainer>
+      <Grid direction="column" alignContent="center">
         {!!qas?.length &&
           qas?.map((qa) => {
             return (
@@ -60,26 +66,6 @@ export default function Quiz() {
             );
           })}
       </Grid>
-    </>
+    </StyledQuizContainer>
   );
 }
-
-const useStyles = makeStyles(() => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    alignItems: "center",
-    alignContent: "space-between",
-    paddingTop: "25px",
-  },
-  link: {
-    color: "rgb(107, 62, 149)",
-    textDecoration: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-    padding: "30px 30px 30px 30px",
-  },
-}));

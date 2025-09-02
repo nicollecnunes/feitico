@@ -13,6 +13,7 @@ import n12 from "../images/homenageados/n12.jpeg"
 
 export const DadosHomenageados = [
   {
+    id: 1,
     posicao: 1,
     nome: "Christiane Soares Aleixo",
     motivo: "Colega da Kátia, vizinha e ficaram amigas na Bangalô",
@@ -21,6 +22,7 @@ export const DadosHomenageados = [
     apelido: "Chris",
   },
   {
+    id: 2,
     posicao: 2,
     nome: "Luciana Bernadino",
     motivo: "Conheceram-se e ficaram amigas na Bangalô",
@@ -29,6 +31,7 @@ export const DadosHomenageados = [
     apelido: "Lu",
   },
   {
+    id: 3,
     posicao: 3,
     nome: "Renata Cerqueira",
     motivo: "Morou na Feitiço",
@@ -36,6 +39,7 @@ export const DadosHomenageados = [
     foto: n3,
     apelido: "",
   },{
+    id: 4,
     posicao: 4,
     nome: "Patrícia de Morais Pereira",
     motivo: "Irmã da Dani, morou na Feitiço",
@@ -43,6 +47,7 @@ export const DadosHomenageados = [
     foto: n4,
     apelido: "Pati",
   },{
+    id: 5,
     posicao: 5,
     nome: "Tatiana Santos de Oliveira",
     motivo: "Morou na Feitiço",
@@ -50,6 +55,7 @@ export const DadosHomenageados = [
     foto: n5,
     apelido: "Tati",
   },{
+    id: 6,
     posicao: 6,
     nome: "Vinícius Cravo",
     motivo: "Ex-aluno da Bangalô",
@@ -57,6 +63,7 @@ export const DadosHomenageados = [
     foto: n6,
     apelido: "Glick",
   },{
+    id: 7,
     posicao: 7,
     nome: "Natália Lopes",
     motivo: "Ficou amiga da casa devido à Marina",
@@ -64,6 +71,7 @@ export const DadosHomenageados = [
     foto: n7,
     apelido: "Nat Nativa",
   },{
+    id: 8,
     posicao: 8,
     nome: "Viviane Faria",
     motivo: "Amiga de infância da Ju e ficou amiga da casa",
@@ -71,6 +79,7 @@ export const DadosHomenageados = [
     foto: n8,
     apelido: "Vivi",
   },{
+    id: 9,
     posicao: 9,
     nome: "Bruna Marcela Pereira Nardy",
     motivo: "Irmã da Sasá e mestre na Feitiço",
@@ -78,6 +87,7 @@ export const DadosHomenageados = [
     foto: n9,
     apelido: "Bruninha",
   },{
+    id: 10,
     posicao: 10,
     nome: "Amélia Mendes",
     motivo: "Cumadre da Feitiço por 10 anos",
@@ -85,6 +95,7 @@ export const DadosHomenageados = [
     foto: n10,
     apelido: "Amelinha",
   },{
+    id: 11,
     posicao: 11,
     nome: "Virgínia de Paiva Brumano",
     motivo: "Morou na Feitiço por 3 anos",
@@ -93,6 +104,7 @@ export const DadosHomenageados = [
     apelido: "Virgininha",
   },
   {
+    id: 12,
     posicao: 11,
     nome: "Kamila Bruto",
     motivo: "Morou na Feitiço",

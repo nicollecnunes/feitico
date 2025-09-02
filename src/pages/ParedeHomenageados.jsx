@@ -11,8 +11,15 @@ function ParedeHomenageados() {
   };
 
   return (
-    <Grid>
+    <Grid sx={{ backgroundColor: "rgb(35, 6, 61)", minHeight: "100vh" }}>
       <FormControlLabel
+        sx={{
+          color: "white",
+          fontFamily: "'Bohemian Soul', cursive",
+          "& .MuiCheckbox-root": {
+            color: "white", // Checkbox color
+          },
+        }}
         control={
           <Checkbox
             checked={checked}
@@ -20,12 +27,13 @@ function ParedeHomenageados() {
             inputProps={{ "aria-label": "controlled" }}
           />
         }
+        fontFamily={"'Bohemian Soul', cursive"}
         label="Mostrar Fotos"
       />
       <Grid container justifyContent="center">
         {!!DadosHomenageados?.length &&
           DadosHomenageados?.map((q) => {
-            return <QuadrinhoFixoHomenageado key={q.posicao} exaluna={q} mostrar={checked} />;
+            return <QuadrinhoFixoHomenageado key={q.id} exaluna={q} mostrar={checked} />;
           })}
       </Grid>
     </Grid>

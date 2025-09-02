@@ -1,108 +1,48 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import {
   Button,
   Grid,
   Typography,
-  Box,
-  Modal,
-  Backdrop,
-  Fade,
+  Box
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { styled } from "@mui/system";
 import { useSnackbar } from "notistack";
+import ModalFimDeJogo from "./ModalFimDeJogo";
+
+const StyledQuizCard = styled(Grid)(({ theme }) => ({
+  borderRadius: theme.spacing(2),
+  backgroundColor: "white", // Changed to white for a cleaner look
+  padding: theme.spacing(4),
+  margin: theme.spacing(3, 0),
+  width: "80%", // Adjusted width
+  maxWidth: 700,
+  textAlign: "center",
+  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+}));
+
+const StyledQuestionTypography = styled(Typography)(({ theme }) => ({
+  marginBottom: theme.spacing(3),
+  color: "rgb(35, 6, 61)",
+  fontFamily: "'Bohemian Soul', cursive",
+  fontWeight: "bold",
+}));
+
+const StyledOptionButton = styled(Button)(({ theme }) => ({
+  color: "white",
+  backgroundColor: "rgb(35, 6, 61)",
+  margin: theme.spacing(1),
+  padding: theme.spacing(1.5, 3),
+  "&:hover": {
+    backgroundColor: "rgb(35, 6, 61)",
+  },
+  "&.Mui-disabled": {
+    backgroundColor: "#cccccc",
+    color: "#666666",
+  },
+}));
 
 const QAComponent = ({ qa, acertos, erros, handleOpcao, listaFinal }) => {
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    backgroundColor: "rgb(234, 209, 238)",
-    boxShadow: 24,
-    p: 4,
-  };
-  const ModalFimDeJogo = ({}) => {
-    const navigate = useNavigate();
-
-    const handleClickPlayagain = () => {
-      window.location.reload();
-    };
-    const handleClickQuit = () => {
-      navigate("/");
-    };
-
-    return (
-      <div>
-        <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          open={jogoFinalizado}
-          onClose={handleClickQuit}
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <Fade in={jogoFinalizado}>
-            <Box sx={style}>
-              <Typography
-                id="transition-modal-title"
-                variant="h6"
-                component="h2"
-              >
-                Fim de jogo
-              </Typography>
-              <Typography id="transition-modal-description" sx={{ mt: 0.5 }}>
-                Você acertou {acertos} perguntas!
-              </Typography>
-              <Typography
-                fontWeight={600}
-                id="transition-modal-description"
-                sx={{ mt: 2.5 }}
-              >
-                Respostas:
-              </Typography>
-
-              {listaFinal.map((x) => {
-                return (
-                  <Typography id="transition-modal-description" sx={{ mb: 1 }}>
-                    {x.p}
-                    <br></br>
-                    {x.r}
-                  </Typography>
-                );
-              })}
-
-              <Grid sx={{ ml: 17, mt: 5 }}>
-                <Button
-                  color="secondary"
-                  variant="contained"
-                  sx={{ color: "white" }}
-                  onClick={handleClickPlayagain}
-                >
-                  Jogar Novamente
-                </Button>
-                <Button
-                  color="secondary"
-                  variant="outlined"
-                  sx={{ color: "secondary", ml: 2 }}
-                  onClick={handleClickQuit}
-                >
-                  Sair
-                </Button>
-              </Grid>
-            </Box>
-          </Fade>
-        </Modal>
-      </div>
-    );
-  };
-  const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
-  var x = 0;
   const [botaoDesabilitado, setBotaoDesabilitado] = useState(false);
   const [jogoFinalizado, setJogoFinalizado] = useState(false);
 
@@ -121,42 +61,30 @@ const QAComponent = ({ qa, acertos, erros, handleOpcao, listaFinal }) => {
   };
 
   return (
-    <Grid className={classes.root}>
-      <ModalFimDeJogo />
-      <Typography fontWeight={600} fontSize={26} sx={{ mb: 2 }}>
+    <StyledQuizCard>
+      <ModalFimDeJogo
+        jogoFinalizado={jogoFinalizado}
+        acertos={acertos}
+        listaFinal={listaFinal}
+      />
+      <StyledQuestionTypography variant="h5">
         {qa.pergunta}
-      </Typography>
-      {qa.opcoes.map((x, index) => {
-        return (
-          <Button
-            disabled={botaoDesabilitado}
-            color="secondary"
-            variant="contained"
-            sx={{ color: "white", mr: 2 }}
-            onClick={() => {
-              {
-                handleClickAnswer(index);
-              }
-            }}
-          >
-            {x}
-          </Button>
-        );
-      })}
-    </Grid>
+      </StyledQuestionTypography>
+      <Box sx={{ mt: 2 }}>
+        {qa.opcoes.map((x, index) => {
+          return (
+            <StyledOptionButton
+              disabled={botaoDesabilitado}
+              onClick={() => handleClickAnswer(index)}
+              key={index}
+            >
+              {x}
+            </StyledOptionButton>
+          );
+        })}
+      </Box>
+    </StyledQuizCard>
   );
 };
-
-const useStyles = makeStyles(() => ({
-  root: {
-    borderRadius: "20px",
-    backgroundColor: "rgb(234, 209, 238)",
-    marginLeft: "20px",
-    padding: "20px 20px 20px 20px",
-    margin: "5px 0px 60px 0px",
-    width: "70%",
-    textAlign: "center",
-  },
-}));
 
 export default QAComponent;
