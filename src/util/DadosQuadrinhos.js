@@ -31,8 +31,8 @@ import n30 from "../images/quadrinhos/n30.png";
 import n31 from "../images/quadrinhos/n31.png";
 import n32 from "../images/quadrinhos/n32.jpg";
 import n33 from "../images/quadrinhos/n33.jpg";
-import n34 from "../images/quadrinhos/n34.jpg"
-
+import n34 from "../images/quadrinhos/n34.jpg";
+import n43 from "../images/quadrinhos/n43.jpg"
 export const DadosQuadrinhos = [
   {
     posicao: 1,
@@ -282,7 +282,7 @@ export const DadosQuadrinhos = [
     nome: "Virgínia Silveira",
     curso: "Farmácia",
     apelido: "Edwirges",
-    ano: "15.1",
+    ano: "2022",
     cidade: "Gumarânia - MG",
     foto: n28,
   },
@@ -291,7 +291,7 @@ export const DadosQuadrinhos = [
     nome: "Camila Couto Barbosa",
     curso: "Eng. de Minas",
     apelido: "Camilinha",
-    ano: "16.2",
+    ano: "2022",
     cidade: "Santa Maria de Itabira - MG",
     foto: n29,
   },
@@ -300,7 +300,7 @@ export const DadosQuadrinhos = [
     nome: "Annalis Maciel Vaz Fonseca",
     curso: "Eng. de Minas",
     apelido: "Lis",
-    ano: "17.1",
+    ano: "2022",
     cidade: "Carmo do Cajuru - MG",
     foto: n30,
   },
@@ -309,7 +309,7 @@ export const DadosQuadrinhos = [
     nome: "Maria Eduarda Diniz Camargos",
     curso: "Ciência da Computação",
     apelido: "Duda",
-    ano: "18.1",
+    ano: "2023",
     cidade: "Belo Horizonte - MG",
     foto: n31,
   },
@@ -318,7 +318,7 @@ export const DadosQuadrinhos = [
     nome: "Júlia Oliveira Silva de Castro Souza",
     curso: "Nutrição",
     apelido: "Abelha",
-    ano: "19.2",
+    ano: "2024",
     cidade: "Poços de Caldas - MG",
     foto: n32,
   },
@@ -327,7 +327,7 @@ export const DadosQuadrinhos = [
     nome: "Nicolle Canuto Nunes",
     curso: "Ciência da Computação",
     apelido: "CLT",
-    ano: "20.1/21.2",
+    ano: "2024",
     cidade: "Diamantina - MG",
     foto: n33,
     
@@ -337,9 +337,17 @@ export const DadosQuadrinhos = [
     nome: "Clara Soares Furlan",
     curso: "Ciências Biológicas",
     apelido: "Duplicada",
-    ano: "21.2",
+    ano: "2025",
     cidade: "Presidente Prudente - SP",
     foto: n34,
+  },
+  {
+    posicao: 35,
+    nome: "Ana Carolina Lopes Dias",
+    curso: "Engenharia Ambiental",
+    apelido: "Matrix",
+    ano: "2026",
+    cidade: "Belo Horizonte - MG",
+    foto: n43,
   }
-  
 ];
