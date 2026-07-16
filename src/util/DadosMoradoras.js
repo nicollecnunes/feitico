@@ -9,23 +9,14 @@ import n41 from "../images/quadrinhos/n41.jpg";
 import n42 from "../images/quadrinhos/n42.jpg"
 
 export const DadosMoradoras = [
-  {
-    id: 1,
-    posicao: 35,
-    nome: "Ana Carolina Lopes Dias",
-    curso: "Eng. Ambiental",
-    apelido: "Matrix",
-    ano: "20.2/20.1",
-    cidade: "Belo Horizonte - MG",
-    foto: n35,
-  },
+
   {
     id: 2,
     posicao: 36,
     nome: "Rafaella Braz Rosa",
     curso: "Farmácia",
     apelido: "Pérola",
-    ano: "21.1/21.2",
+    ano: "21.2",
     cidade: "Belo Horizonte - MG",
     foto: n36,
   },
@@ -45,7 +36,7 @@ export const DadosMoradoras = [
     nome: "Marina Queiroga Viana Vaz",
     curso: "Engenharia de Produção",
     apelido: "G1",
-    ano: "22.2/23.1",
+    ano: "23.1",
     cidade: "Minas Novas - MG",
     foto: n38,
   },
