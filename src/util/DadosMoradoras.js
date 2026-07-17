@@ -1,13 +1,13 @@
 
-import n35 from "../images/quadrinhos/n35.jpg";
+
 import n36 from "../images/quadrinhos/n36.jpg";
 import n37 from "../images/quadrinhos/n37.png";
 import n38 from "../images/quadrinhos/n38.png";
 import n39 from "../images/quadrinhos/n39.jpg";
 import n40 from "../images/quadrinhos/n40.jpg";
 import n41 from "../images/quadrinhos/n41.jpg";
-import n42 from "../images/quadrinhos/n42.jpg"
-
+import n42 from "../images/quadrinhos/n42.jpg";
+import n44 from "../images/quadrinhos/n44.jpg"
 export const DadosMoradoras = [
 
   {
@@ -80,5 +80,14 @@ export const DadosMoradoras = [
     cidade: "Betim - MG",
     foto: n42,
   },
-  
+  {
+    id: 9,
+    posicao: 44,
+    nome: "Giselly Santana da Silva",
+    curso: "Administração",
+    apelido: "Toy Story",
+    ano: "25.2",
+    cidade: "Betim - MG",
+    foto: n44,
+  },
 ];
