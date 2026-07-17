@@ -108,4 +108,10 @@ export const ListaRepublicas = [
     rota: "/hinos/17",
     hino: "Quem tem amor tem saudade\r\nquem nao tem passa vontade\r\nfesta boa é na santidade\r\ncarro de puta é voyage\r\nmexer com a Vaticano é\r\nbobagem\r\n",
   },
+   {
+    id: 18,
+    nome: "Baviera",
+    rota: "/hinos/18",
+    hino: "A Baviera é uma casinha pequenina\r\nLa na rua dos paulistas\r\nOnde moram os bicudinhos bonitinhos\r\nTaradinhos por turistas\r\nBaviera, baviera nossa vida em você é prima vera (2x)\r\nA Baviera também tem seus dias belos\r\nCom champanhe e gente bem\r\nFrequentada pela alta sociedade\r\nMas as putinhas vão também\r\nBaviera, Baviera nossa vida em você é primavera (2x)\r\n\r\n\r\nNo tropeço dessa festa\r\nQue beleza que visão\r\nTo afundado na lameira\r\nTo chapado na situação\r\nSo mesmo o cheiro de mulher pra me levantar do chão\r\nTo no canto to cantando beliscando como se diz, atirando e metralhando pra onde aponta meu nariz\r\nBaviera em teus seios eu sou mais do que feliz\r\nSou criança, sou cerveja, sou maluco e peço bis\r\nDeus é pai e a cachaca vai",
+  },
 ];
