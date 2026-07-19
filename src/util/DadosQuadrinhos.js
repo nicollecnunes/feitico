@@ -35,7 +35,6 @@ import n34 from "../images/quadrinhos/n34.jpg";
 import n43 from "../images/quadrinhos/n43.jpeg"
 export const DadosQuadrinhos = [
   {
-    posicao: 1,
     nome: "Katia Maria de Oliveira",
     curso: "Farmácia",
     ano: "2000",
@@ -44,7 +43,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 2,
     nome: "Jussara Vieira e Silva",
     curso: "Ciência da Computação",
     ano: "2000",
@@ -53,7 +51,6 @@ export const DadosQuadrinhos = [
     apelido: "Ju",
   },
   {
-    posicao: 3,
     nome: "Daniela de Morais Pereira",
     curso: "Farmácia",
     ano: "2000",
@@ -62,7 +59,6 @@ export const DadosQuadrinhos = [
     apelido: "Dani",
   },
   {
-    posicao: 4,
     nome: "Bianca Mesquita Pereira",
     curso: "Nutrição",
     ano: "2003",
@@ -71,7 +67,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 5,
     nome: "Daniela Cristina de Castro",
     curso: "Eng. de Produção",
     ano: "2003",
@@ -80,7 +75,6 @@ export const DadosQuadrinhos = [
     apelido: "Dan",
   },
   {
-    posicao: 6,
     nome: "Anielly Garcia de Freitas",
     curso: "Farmácia",
     ano: "2004",
@@ -89,7 +83,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 7,
     nome: "Ludmilla Santos de Barros",
     curso: "Direito",
     ano: "2005",
@@ -98,7 +91,6 @@ export const DadosQuadrinhos = [
     apelido: "Lud",
   },
   {
-    posicao: 8,
     nome: "Samila Rafaela Pereira Nardy",
     curso: "Ciências Biológicas",
     ano: "2005",
@@ -107,7 +99,6 @@ export const DadosQuadrinhos = [
     apelido: "Sasá",
   },
   {
-    posicao: 9,
     nome: "Alice Betim Borges",
     curso: "Farmácia",
     ano: "2007",
@@ -116,7 +107,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 10,
     nome: "Marina Mansur Ferrari",
     curso: "Eng. de Produção",
     ano: "2008",
@@ -125,7 +115,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 11,
     nome: "Tatiana Pereira Freitas",
     curso: "Turismo",
     ano: "2008",
@@ -134,7 +123,6 @@ export const DadosQuadrinhos = [
     apelido: "Tatica",
   },
   {
-    posicao: 12,
     nome: "Quênia Goulart Ferreira",
     curso: "Eng. Ambiental",
     ano: "2009",
@@ -143,7 +131,6 @@ export const DadosQuadrinhos = [
     apelido: "Freaky",
   },
   {
-    posicao: 13,
     nome: "Nathália Sette Câmara Magalhães",
     curso: "Eng. Metalúrgica",
     ano: "2010",
@@ -152,7 +139,6 @@ export const DadosQuadrinhos = [
     apelido: "Nath Sette",
   },
   {
-    posicao: 14,
     nome: "Luciana Portugal Menezes",
     curso: "Eng. Ambiental",
     ano: "2011",
@@ -161,7 +147,6 @@ export const DadosQuadrinhos = [
     apelido: "Luca",
   },
   {
-    posicao: 15,
     nome: "Ana Caroline Arpini Reis",
     curso: "Turismo",
     ano: "2011",
@@ -170,7 +155,6 @@ export const DadosQuadrinhos = [
     apelido: "Carol",
   },
   {
-    posicao: 16,
     nome: "Flaviana Esquirio Gaggiato",
     curso: "Eng. Civil",
     ano: "2011",
@@ -179,7 +163,6 @@ export const DadosQuadrinhos = [
     apelido: "Flavis",
   },
   {
-    posicao: 17,
     nome: "Karen Leite de Queiroz",
     curso: "Eng. Ambiental",
     ano: "2011",
@@ -188,7 +171,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 18,
     nome: "Pâmela Cristina de Oliveira",
     curso: "Eng. Civil",
     ano: "2011",
@@ -197,7 +179,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 19,
     nome: "Sheila Michele dos Santos",
     curso: "Administração",
     ano: "2012",
@@ -206,7 +187,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 20,
     nome: "Thaís Corrêa Santos",
     curso: "Jornalismo",
     ano: "2015",
@@ -215,7 +195,6 @@ export const DadosQuadrinhos = [
     apelido: "",
   },
   {
-    posicao: 21,
     nome: "Tamiris de Oliveira Branco",
     curso: "Eng. de Produção",
     ano: "2017",
@@ -224,7 +203,6 @@ export const DadosQuadrinhos = [
     apelido: "Tamis",
   },
   {
-    posicao: 22,
     nome: "Larissa Marques Souza",
     curso: "Eng. de Minas",
     ano: "2017",
@@ -233,7 +211,6 @@ export const DadosQuadrinhos = [
     apelido: "Lari",
   },
   {
-    posicao: 23,
     nome: "Isadora Mikovic Guimarães",
     curso: "Administração",
     ano: "2017",
@@ -242,7 +219,6 @@ export const DadosQuadrinhos = [
     apelido: "Isa",
   },
   {
-    posicao: 24,
     nome: "Marina Franco Negreiros",
     curso: "Eng. Civil",
     ano: "2017",
@@ -251,7 +227,6 @@ export const DadosQuadrinhos = [
     apelido: "São",
   },
   {
-    posicao: 25,
     nome: "Ana Carolina Faria Oliveira Morais",
     curso: "Eng. de Minas",
     ano: "2018",
@@ -260,7 +235,6 @@ export const DadosQuadrinhos = [
     apelido: "Ana",
   },
   {
-    posicao: 26,
     nome: "Dilaina da Silva Santos",
     curso: "Farmácia",
     ano: 2019,
@@ -269,7 +243,6 @@ export const DadosQuadrinhos = [
     apelido: "Dilas",
   },
   {
-    posicao: 27,
     nome: "Mayara Bueno Ezequiel",
     curso: "Filosofia",
     ano: 2019,
@@ -278,7 +251,6 @@ export const DadosQuadrinhos = [
     apelido: "May",
   },
   {
-    posicao: 28,
     nome: "Virgínia Silveira",
     curso: "Farmácia",
     apelido: "Edwirges",
@@ -287,7 +259,6 @@ export const DadosQuadrinhos = [
     foto: n28,
   },
   {
-    posicao: 29,
     nome: "Camila Couto Barbosa",
     curso: "Eng. de Minas",
     apelido: "Camilinha",
@@ -296,7 +267,6 @@ export const DadosQuadrinhos = [
     foto: n29,
   },
   {
-    posicao: 30,
     nome: "Annalis Maciel Vaz Fonseca",
     curso: "Eng. de Minas",
     apelido: "Lis",
@@ -305,7 +275,6 @@ export const DadosQuadrinhos = [
     foto: n30,
   },
   {
-    posicao: 31,
     nome: "Maria Eduarda Diniz Camargos",
     curso: "Ciência da Computação",
     apelido: "Duda",
@@ -314,7 +283,6 @@ export const DadosQuadrinhos = [
     foto: n31,
   },
   {
-    posicao: 32,
     nome: "Júlia Oliveira Silva de Castro Souza",
     curso: "Nutrição",
     apelido: "Abelha",
@@ -323,17 +291,14 @@ export const DadosQuadrinhos = [
     foto: n32,
   },
   {
-    posicao: 33,
     nome: "Nicolle Canuto Nunes",
     curso: "Ciência da Computação",
     apelido: "CLT",
     ano: "2024",
     cidade: "Diamantina - MG",
     foto: n33,
-    
   },
   {
-    posicao: 34,
     nome: "Clara Soares Furlan",
     curso: "Ciências Biológicas",
     apelido: "Duplicada",
@@ -342,7 +307,6 @@ export const DadosQuadrinhos = [
     foto: n34,
   },
   {
-    posicao: 35,
     nome: "Ana Carolina Lopes Dias",
     curso: "Engenharia Ambiental",
     apelido: "Matrix",

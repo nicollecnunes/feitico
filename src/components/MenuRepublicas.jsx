@@ -47,16 +47,13 @@ function MenuRepublicas({ buttonText, sx, ButtonComponent, ...props }) {
           "aria-labelledby": "basic-button",
         }}
       >
-        {!!ListaRepublicas?.length &&
-          ListaRepublicas?.map((rep, index) => {
-            return (
-              <StyledLink to={rep.rota} key={index}>
-                <MenuItem onClick={handleClose}>
-                  <Typography color="inherit">{rep.nome}</Typography>
-                </MenuItem>
-              </StyledLink>
-            );
-          })}
+        {ListaRepublicas.map((rep, index) => (
+          <StyledLink to={`/hinos/${index}`} key={index}>
+            <MenuItem onClick={handleClose}>
+              <Typography color="inherit">{rep.nome}</Typography>
+            </MenuItem>
+          </StyledLink>
+        ))}
       </Menu>
     </>
   );

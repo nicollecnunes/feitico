@@ -1,5 +1,3 @@
-
-
 import n36 from "../images/quadrinhos/n36.jpg";
 import n37 from "../images/quadrinhos/n37.png";
 import n38 from "../images/quadrinhos/n38.png";
@@ -7,12 +5,10 @@ import n39 from "../images/quadrinhos/n39.jpg";
 import n40 from "../images/quadrinhos/n40.jpg";
 import n41 from "../images/quadrinhos/n41.jpg";
 import n42 from "../images/quadrinhos/n42.jpg";
-import n44 from "../images/quadrinhos/n44.jpeg"
-export const DadosMoradoras = [
+import n44 from "../images/quadrinhos/n44.jpeg";
 
+export const DadosMoradoras = [
   {
-    id: 2,
-    posicao: 36,
     nome: "Rafaella Braz Rosa",
     curso: "Farmácia",
     apelido: "Pérola",
@@ -21,8 +17,6 @@ export const DadosMoradoras = [
     foto: n36,
   },
   {
-    id: 3,
-    posicao: 37,
     nome: "Sara Chapuis Veloso",
     curso: "Nutrição",
     apelido: "Nokia",
@@ -31,8 +25,6 @@ export const DadosMoradoras = [
     foto: n37,
   },
   {
-    id: 4,
-    posicao: 38,
     nome: "Marina Queiroga Viana Vaz",
     curso: "Engenharia de Produção",
     apelido: "G1",
@@ -41,8 +33,6 @@ export const DadosMoradoras = [
     foto: n38,
   },
   {
-    id: 5,
-    posicao: 39,
     nome: "Sarah Werner Vaconcelos",
     curso: "Direito",
     apelido: "Pipa",
@@ -51,8 +41,6 @@ export const DadosMoradoras = [
     foto: n39,
   },
   {
-    id: 6,
-    posicao: 40,
     nome: "Maria Fernanda Buttignon da Cunha",
     curso: "Direito",
     apelido: "Hollywood",
@@ -61,8 +49,6 @@ export const DadosMoradoras = [
     foto: n40,
   },
   {
-    id: 7,
-    posicao: 41,
     nome: "Maria Letícia Nascimento de Castro",
     curso: "Ciências Biológicas",
     apelido: "Scooby",
@@ -71,8 +57,6 @@ export const DadosMoradoras = [
     foto: n41,
   },
   {
-    id: 8,
-    posicao: 42,
     nome: "Alice da Conceição Silva Medeiros",
     curso: "Engenharia Mecânica",
     apelido: "Katana",
@@ -81,8 +65,6 @@ export const DadosMoradoras = [
     foto: n42,
   },
   {
-    id: 9,
-    posicao: 44,
     nome: "Giselly Santana da Silva",
     curso: "Administração",
     apelido: "Toy Story",

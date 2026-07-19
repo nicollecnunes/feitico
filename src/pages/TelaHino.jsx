@@ -39,7 +39,7 @@ const StyledTitle = styled(Typography)(({ theme }) => ({
 function TelaHino() {
   let { id } = useParams();
 
-  const repAtual = ListaRepublicas.find((rep) => rep.id === parseInt(id));
+  const repAtual = ListaRepublicas[parseInt(id)];
   const hinoFormatado = repAtual.hino.split(/\r?\n/);
 
   return (
