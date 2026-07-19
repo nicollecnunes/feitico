@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/feitico/static/css/main.1927c29a.css",
-    "main.js": "/feitico/static/js/main.e49d126c.js",
+    "main.js": "/feitico/static/js/main.400a7e33.js",
     "static/media/n38.png": "/feitico/static/media/n38.aa25bd730539a8384144.png",
     "static/media/n28.png": "/feitico/static/media/n28.df32e92a11924fe8c9f7.png",
     "static/media/n30.png": "/feitico/static/media/n30.792fcf1a224c9ce2cbd3.png",
@@ -12,6 +12,7 @@
     "static/media/background.jpg": "/feitico/static/media/background.6a2cfa0df636f5af5080.jpg",
     "static/media/n10.jpg": "/feitico/static/media/n10.5f86eff2065057dd7539.jpg",
     "static/media/n29.png": "/feitico/static/media/n29.285c801b3851a1faac9a.png",
+    "static/media/n43.jpeg": "/feitico/static/media/n43.78a36568022d2d1ca93e.jpeg",
     "static/media/n2.jpg": "/feitico/static/media/n2.882a780cf240bfad5065.jpg",
     "static/media/n8.jpg": "/feitico/static/media/n8.cf7535085ecabe68e286.jpg",
     "static/media/n6.jpg": "/feitico/static/media/n6.d123a8b0ebba582ff3c3.jpg",
@@ -37,6 +38,7 @@
     "static/media/n27.jpg": "/feitico/static/media/n27.44e68dd86d2006635f92.jpg",
     "static/media/n12.jpeg": "/feitico/static/media/n12.b2ae926bfa447c53b543.jpeg",
     "static/media/n25.jpg": "/feitico/static/media/n25.6ad56b87cdabd965e886.jpg",
+    "static/media/n44.jpeg": "/feitico/static/media/n44.e7d82f7c8c846aa8135f.jpeg",
     "static/media/n40.jpg": "/feitico/static/media/n40.0f9c187e2a7721deda85.jpg",
     "static/media/n39.jpg": "/feitico/static/media/n39.e2b1f8c4c96b606c9732.jpg",
     "static/media/n34.jpg": "/feitico/static/media/n34.48e3e5dd677f2ffbbe8e.jpg",
@@ -46,13 +48,12 @@
     "static/media/n42.jpg": "/feitico/static/media/n42.b2a246151275cb5d91e1.jpg",
     "static/media/n41.jpg": "/feitico/static/media/n41.61f06ce0d73bce1ae398.jpg",
     "static/media/Bohemian Soul.otf": "/feitico/static/media/Bohemian Soul.45127c359e19756b99cc.otf",
-    "static/media/n35.jpg": "/feitico/static/media/n35.0941076ac8a5270846bb.jpg",
     "index.html": "/feitico/index.html",
     "main.1927c29a.css.map": "/feitico/static/css/main.1927c29a.css.map",
-    "main.e49d126c.js.map": "/feitico/static/js/main.e49d126c.js.map"
+    "main.400a7e33.js.map": "/feitico/static/js/main.400a7e33.js.map"
   },
   "entrypoints": [
     "static/css/main.1927c29a.css",
-    "static/js/main.e49d126c.js"
+    "static/js/main.400a7e33.js"
   ]
 }
