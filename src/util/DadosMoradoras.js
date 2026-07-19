@@ -7,7 +7,7 @@ import n39 from "../images/quadrinhos/n39.jpg";
 import n40 from "../images/quadrinhos/n40.jpg";
 import n41 from "../images/quadrinhos/n41.jpg";
 import n42 from "../images/quadrinhos/n42.jpg";
-import n44 from "../images/quadrinhos/n44.jpg"
+import n44 from "../images/quadrinhos/n44.jpeg"
 export const DadosMoradoras = [
 
   {
