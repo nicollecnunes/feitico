@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/feitico/static/css/main.1927c29a.css",
-    "main.js": "/feitico/static/js/main.400a7e33.js",
+    "main.js": "/feitico/static/js/main.14fb28da.js",
     "static/media/n38.png": "/feitico/static/media/n38.aa25bd730539a8384144.png",
     "static/media/n28.png": "/feitico/static/media/n28.df32e92a11924fe8c9f7.png",
     "static/media/n30.png": "/feitico/static/media/n30.792fcf1a224c9ce2cbd3.png",
@@ -50,10 +50,10 @@
     "static/media/Bohemian Soul.otf": "/feitico/static/media/Bohemian Soul.45127c359e19756b99cc.otf",
     "index.html": "/feitico/index.html",
     "main.1927c29a.css.map": "/feitico/static/css/main.1927c29a.css.map",
-    "main.400a7e33.js.map": "/feitico/static/js/main.400a7e33.js.map"
+    "main.14fb28da.js.map": "/feitico/static/js/main.14fb28da.js.map"
   },
   "entrypoints": [
     "static/css/main.1927c29a.css",
-    "static/js/main.400a7e33.js"
+    "static/js/main.14fb28da.js"
   ]
 }
